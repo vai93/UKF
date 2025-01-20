@@ -2,7 +2,7 @@ function sendMail(e) {
     e.preventDefault();  // Prevent the form from submitting normally
     console.log("called");
 
-    const email = "vkpatel93@gmail.com";
+    const email = "mirzahashimxyz@gmail.com";
     const templateParams = {
         to_email: email,
         subject: "New Contact Request from...",
