@@ -26,7 +26,7 @@ window.addEventListener('scroll', handleScroll);
 document.addEventListener("DOMContentLoaded", function () {
     const observerOptions = {
         root: null, // Use the viewport as the root
-        threshold: 0.2, // Trigger when 20% of the element is visible
+        threshold: 0.2, // Trigger when 30% of the element is visible
     };
 
     const callback = (entries, observer) => {
@@ -41,11 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(callback, observerOptions);
 
     // Observe all elements with the animated-text class
-    const animatedElements = document.querySelectorAll(".animated-text, .carousel-inner img");
+    const animatedElements = document.querySelectorAll(".animated-text, .list, .carousel-inner img");
     animatedElements.forEach((element) => {
         observer.observe(element);
     });
 });
+
 
 
 document.querySelectorAll(".social-icons a").forEach((icon) => {

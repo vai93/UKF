@@ -259,7 +259,7 @@ html {
 
 /*------------------------------------------------------------- About us--------------------------------------------------*/
 #about {
-    padding: 70px 0;
+    padding: 40px 0;
     background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
 }
 
@@ -267,7 +267,7 @@ html {
     font-size: 3.5rem;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     position: relative;
 }
 
@@ -287,7 +287,7 @@ html {
 .about-text ul li {
     font-size: 1.3rem;
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .about-text ul {
@@ -307,7 +307,7 @@ html {
     object-fit: cover;
     margin-left: 30px;
     width: 95% !important;
-    height: 450px;
+    height: 390px;
 }
 
 .carousel-control-prev,
@@ -322,15 +322,25 @@ html {
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 .animated-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.list{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.list.active{
     opacity: 1;
     transform: translateY(0);
 }
 
 /*------------------------------------------------------------- OUR Services----------------------------------------------*/
 .services-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background: linear-gradient(to bottom, #ffffff, #f0f4f9);
 }
 
@@ -466,8 +476,8 @@ html {
 
 .left-section {
     background: transparent;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .left-section ul {
@@ -476,7 +486,7 @@ html {
   }
 
   .left-section ul li {
-    font-size: 70px; 
+    font-size: 60px; 
     margin-bottom: 20px;
     cursor: pointer;
     transition: color 0.3s, font-weight 0.3s;
