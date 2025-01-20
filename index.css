@@ -36,6 +36,8 @@ html {
     padding: 0px;
     position: relative;
     z-index: 1;
+    max-width: 90%; /* Ensure it spans the full width */
+    padding: 0;
 }
 
 .logo {
@@ -50,6 +52,7 @@ html {
 .nav {
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 
 .nav-item {
@@ -257,7 +260,7 @@ html {
 /*------------------------------------------------------------- About us--------------------------------------------------*/
 #about {
     padding: 70px 0;
-    background: #2d40d5;
+    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
 }
 
 .about-text h1 {
@@ -273,11 +276,18 @@ html {
     font-style: italic;
 }
 
-.about-text p,
+.about-text p {
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.7; /* Line spacing added */
+    text-align: justify;
+
+}
 .about-text ul li {
-    font-size: 1.1rem;
-    color: #cbdbff;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
 .about-text ul {
@@ -295,8 +305,9 @@ html {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     object-fit: cover;
-    width: 100%;
-    height: 400px;
+    margin-left: 30px;
+    width: 95% !important;
+    height: 450px;
 }
 
 .carousel-control-prev,
@@ -449,12 +460,14 @@ html {
     background-color: #ff5700; /* Lighter red on hover */
 }
 /*------------------------------------------------------------- Vision--------------------------------------------------*/
+#vision{
+    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
+}
 
 .left-section {
-    background-color: #ffffff;
-    width: 500px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    background: transparent;
+    margin-top: 70px;
+    margin-bottom: 70px;
   }
 
   .left-section ul {
@@ -471,14 +484,14 @@ html {
 
   .left-section ul li:hover,
   .left-section ul li.active {
-    color: #0d6efd;
+    color: #000e79;
     font-weight: bold;
   }
 
   .right-section {
     text-align: start;
     padding: 20px;
-    background-color: #ffffff;
+    background: transparent;
     margin-left: 200px;
   }
 
