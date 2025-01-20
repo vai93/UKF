@@ -1,0 +1,385 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header and Video */
+#header {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
+}
+
+.container {
+    padding: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    margin-right: 50px;
+    width: 120px;
+    height: 100px;
+}
+
+/* Navbar */
+
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000e79 !important;
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #000e79 !important; /* Change color on hover */
+}
+
+.nav-link:hover::after {
+    width: 90%;
+}
+
+.header {
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+
+
+/* Navbar Button */
+.btn-primary {
+    color: #ffffff;
+    background-color: #ff5700;
+    border: none;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000e79;
+}
+
+/*------------------------------------------------------------- contact us--------------------------------------------------*/
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1c1c1c;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem;
+    
+}
+
+.info-section {
+    flex: 1;
+    background: linear-gradient(to bottom, #4f94d4, #73a5d8, #a4caef);
+    padding: 40px;
+    color: #fff;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    line-height: 1.6;
+}
+
+.info-section .social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.info-section .social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.form-section {
+    flex: 1.5;
+    background-color: #1c1c1c;
+    padding: 40px;
+}
+
+.form-control {
+    background-color: #333;
+    color: #fff;
+    border: none; /* Invisible border */
+    border-radius: 0; /* Remove border radius */
+    padding-left: 2.5rem;
+    box-shadow: none; /* Remove inner shadow */
+}
+
+.form-control:focus {
+    outline: none; /* Remove focus border */
+    box-shadow: none;
+
+}
+
+.input-group-text {
+    background-color: #333;
+    border: none;
+    color: #ffffff;
+}
+
+
+
+.form-section form button {
+    width: auto; /* Keeps button size dynamic */
+    margin: 20px auto 0; /* Adds spacing and centers the button */
+    background-color: #ff5700;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.form-section form button:hover {
+    background-color: #000e79;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.privacy {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy a {
+    color: #4f94d4;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Change placeholder text color to white */
+.form-control::placeholder {
+    color: #cccccc;
+    opacity: 1; /* Ensure full opacity */
+}
+
+/* Adjust for browsers like Firefox */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #cccccc;
+    opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #cccccc;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #cccccc;
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #686666;
+    opacity: 1;
+}
+
+.input-group .form-control {
+    border-radius: 5px !important; /* Apply border-radius to the input */
+}
+
+.input-group .input-group-text {
+    border-radius: 5px 0 0 5px !important; /* Apply border-radius to the left side of the icon container */
+}
+
+.input-group .form-control {
+    border-radius: 0 5px 5px 0 !important; /* Apply border-radius to the right side of the input field */
+}
+
+/*------------------------------------------------------------- Footer--------------------------------------------------*/
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    margin-right: 120px;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    font-size: 13px;
+    color: #999;
+}
+
+.footer-links {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-newsletter {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.footer-newsletter h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.footer-newsletter button {
+    padding: 10px 15px;
+    background-color: #f60;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.footer-newsletter button:hover {
+    background-color: #ff7700;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #999;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f60;
+}
+
+
+
+
