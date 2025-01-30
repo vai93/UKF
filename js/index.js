@@ -1,3 +1,34 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var sidebar = document.getElementById("sidebarMenu");
+    var toggler = document.querySelector(".navbar-toggler");
+    var closeBtn = document.querySelector(".close-btn");
+    var navLinks = document.querySelectorAll(".sidebar ul li a");
+
+    // Open sidebar when clicking the toggler button (for small screens)
+    toggler.addEventListener("click", function () {
+        sidebar.classList.toggle("show");
+    });
+
+    // Close sidebar when clicking the close button
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("show");
+    });
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && !toggler.contains(event.target)) {
+            sidebar.classList.remove("show");
+        }
+    });
+
+    // Close sidebar when clicking any navigation link
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function () {
+            sidebar.classList.remove("show");
+        });
+    });
+});
+
 function handleScroll() {
     const section = document.getElementById('infoSection');
     const cards = document.querySelectorAll('.info-card');
@@ -84,3 +115,4 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('learnMoreButton').addEventListener('click', () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
+

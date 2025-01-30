@@ -13,10 +13,10 @@ html {
 /* Header and Video */
 #header {
     width: 100%;
-    height: 120vh;
+    height: 150px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
+    background: linear-gradient(to bottom, #85ABD9,);
 }
 
 .container {
@@ -95,13 +95,120 @@ html {
     background-color: #000e79;
 }
 
-/*------------------------------------------------------------- contact us--------------------------------------------------*/
+ /* Sidebar styles for small screens */
+ @media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: linear-gradient(to bottom, #85ABD9, #c1def3);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1050;
+    }
 
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar ul {
+        padding: 20px 0;
+        list-style: none;
+    }
+
+    .sidebar ul li {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #000e79;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar ul li a i {
+        margin-right: 10px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+    
+    }
+    
+    .logo {
+        width: 100px;
+        height: 80px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 100px;
+        height: 80px;
+    }
+
+    .quote-container h1 {
+        font-size: 2rem;
+    }
+
+    #header {
+        height: 290px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+
+    .quote-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*------------------------------------------------------------- contact us--------------------------------------------------*/
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
     color: #fff;
 }
 
@@ -113,7 +220,6 @@ body {
     border-radius: 12px;
     overflow: hidden;
     margin: 2rem;
-    
 }
 
 .info-section {
@@ -130,6 +236,7 @@ body {
 
 .info-section p {
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .info-section .social-media {
@@ -153,16 +260,15 @@ body {
 .form-control {
     background-color: #333;
     color: #fff;
-    border: none; /* Invisible border */
-    border-radius: 0; /* Remove border radius */
+    border: none;
+    border-radius: 0;
     padding-left: 2.5rem;
-    box-shadow: none; /* Remove inner shadow */
+    box-shadow: none;
 }
 
 .form-control:focus {
-    outline: none; /* Remove focus border */
+    outline: none;
     box-shadow: none;
-
 }
 
 .input-group-text {
@@ -171,17 +277,17 @@ body {
     color: #ffffff;
 }
 
-
-
 .form-section form button {
-    width: auto; /* Keeps button size dynamic */
-    margin: 20px auto 0; /* Adds spacing and centers the button */
+    width: 100%;
+    margin: 20px auto 0;
     background-color: #ff5700;
     color: #fff;
     cursor: pointer;
     border-radius: 7px;
     transition: background-color 0.3s;
     border: none;
+    padding: 12px;
+    font-size: 18px;
 }
 
 .form-section form button:hover {
@@ -214,55 +320,82 @@ label {
     margin-bottom: 20px;
 }
 
-/* Change placeholder text color to white */
 .form-control::placeholder {
     color: #cccccc;
-    opacity: 1; /* Ensure full opacity */
-}
-
-/* Adjust for browsers like Firefox */
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-    color: #cccccc;
-    opacity: 1;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-    color: #cccccc;
-    opacity: 1;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-    color: #cccccc;
-    opacity: 1;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    color: #686666;
     opacity: 1;
 }
 
 .input-group .form-control {
-    border-radius: 5px !important; /* Apply border-radius to the input */
+    border-radius: 5px !important;
 }
 
 .input-group .input-group-text {
-    border-radius: 5px 0 0 5px !important; /* Apply border-radius to the left side of the icon container */
+    border-radius: 5px 0 0 5px !important;
 }
 
 .input-group .form-control {
-    border-radius: 0 5px 5px 0 !important; /* Apply border-radius to the right side of the input field */
+    border-radius: 0 5px 5px 0 !important;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .info-section, .form-section {
+        padding: 30px;
+    }
+
+    .info-section h2 {
+        font-size: 24px;
+    }
+
+    .info-section p {
+        font-size: 14px;
+    }
+
+    .form-section form button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section, .form-section {
+        padding: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 22px;
+    }
+
+    .info-section p {
+        font-size: 13px;
+    }
+
+    .form-section form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .privacy {
+        font-size: 12px;
+    }
+}
+
 
 /*------------------------------------------------------------- Footer--------------------------------------------------*/
 
+/* Footer Styles */
 .footer {
     background-color: #111;
     color: #fff;
-    padding: 50px 0px;
+    padding: 50px 20px;
     position: relative;
 }
 
@@ -380,6 +513,75 @@ textarea::-webkit-input-placeholder {
     color: #f60;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .footer-logo, .footer-links, .footer-newsletter {
+        flex: 1 1 100%;
+        margin: 20px 0;
+    }
 
+    .footer-logo img {
+        max-width: 80px;
+    }
 
+    .footer-logo p, .footer-logo span, .footer-links ul li a {
+        font-size: 12px;
+    }
+
+    .footer-links h4, .footer-newsletter h4 {
+        font-size: 16px;
+    }
+
+    .footer-newsletter input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .footer-newsletter button {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+    .footer {
+        margin-top: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 10px;
+    }
+
+    .footer-logo img {
+        max-width: 70px;
+    }
+
+    .footer-logo p, .footer-logo span, .footer-links ul li a {
+        font-size: 11px;
+    }
+
+    .footer-links h4, .footer-newsletter h4 {
+        font-size: 14px;
+    }
+
+    .footer-newsletter input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .footer-newsletter button {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+    }
+}

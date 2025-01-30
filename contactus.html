@@ -21,8 +21,15 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav class="d-flex justify-content-between align-items-center">
-                <img src="img/ukf2.png" class="logo" alt="Logo">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
+                <a href="#" class="navbar-brand">
+                    <img src="img/ukf2.png" class="logo" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about"><i class="fas fa-info-circle"></i> About us</a></li>
@@ -31,66 +38,81 @@
                     <li class="nav-item"><a class="nav-link" href="#career"><i class="fas fa-briefcase"></i> Career</a></li>
                     <li class="nav-item"><button class="btn btn-primary rounded-pill px-4">Get A Quote</button></li>
                 </ul>
+            </div>
             </nav>
         </div>
+    </div>
 
-        <div class="container d-flex justify-content-center align-items-center vh-100">
-            <div class="contact-section w-100">
-                <div class="info-section">
-                    <h2>Get in Touch</h2>
-                    <p><strong>Visit us</strong><br>67 Wisteria Way Croydon South VIC 3136 AU</p>
-                    <p><strong>Chat to us</strong><br>hello@ukfshipping.com</p>
-                    <p><strong>Call us</strong><br>(+995) 555-55-55-55</p>
-                    <div class="social-media">
-                        <a href="#"><i class="fas fa-globe"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="sidebar d-md-none" id="sidebarMenu">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About us</a></li>
+            <li><a href="index.html#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            <li><a href="#career"><i class="fas fa-briefcase"></i> Career</a></li>
+            <li>
+                <button class="btn btn-primary rounded-pill px-4">Get A Quote</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="contact-section w-100">
+            <div class="info-section">
+                <h2>Get in Touch</h2>
+                <p><strong>Visit us</strong><br>67 Wisteria Way Croydon South VIC 3136 AU</p>
+                <p><strong>Chat to us</strong><br>hello@ukfshipping.com</p>
+                <p><strong>Call us</strong><br>(+995) 555-55-55-55</p>
+                <div class="social-media">
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="firstName">First Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-section">
-                    <form id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="firstName">First Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="lastName">Last Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tell us what we can help you with"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="fas fa-comment"></i></span>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Tell us what we can help you with"></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-3 w-100">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3 w-100">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
@@ -99,7 +121,8 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <img src="img/ukf2.png" alt="Logo">
-                <p>The faster, easier way to book and manage your international shipments</p>
+                <p>The faster, easier way to book and manage your
+                    international shipments</p>
                 <span>Copyright © 2023 Bankar.</span>
             </div>
             <div class="footer-links">
@@ -112,12 +135,28 @@
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Container Leasing</a></li>
+                    <li><a href="#">Container Trading</a></li>
+                    <li><a href="#">Ocean Freight</a></li>
+                    <li><a href="#">Container Control</a></li>
+                    <li><a href="#">Container Tracking</a></li>
+                </ul>
+            </div>
             <div class="footer-newsletter">
                 <h4>Join our newsletter</h4>
                 <form>
                     <input type="email" placeholder="Enter email address">
                     <button type="submit">→</button>
                 </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
             </div>
         </div>
     </footer>
