@@ -13,6 +13,12 @@ html {
     height: 100%;
 }
 
+/* Added to ensure the body does not cause horizontal overflow */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 /* Header and Video */
 #header {
     width: 100%;
@@ -154,7 +160,6 @@ html {
     }
 }
 
-
 /* Responsive Navbar */
 @media (max-width: 768px) {
 
@@ -251,8 +256,6 @@ html {
         font-size: 1.5rem;
     }
 }
-
-
 
 /*------------------------------------------------------ Cart -------------------------------------------------------*/
 /* Info Section Container */
@@ -416,7 +419,6 @@ html {
     }
 }
 
-
 /*------------------------------------------------------------- About us--------------------------------------------------*/
 #about {
     padding: 40px 0;
@@ -538,9 +540,10 @@ html {
 
 /*------------------------------------------------------------- OUR services--------------------------------------------------*/
 
-
-/* Services Section */
-.services-section {
+/* ===========================
+   Services Section Styles
+   =========================== */
+   .services-section {
     padding: 40px 20px;
     background: linear-gradient(to bottom, #ffffff, #f0f4f9);
 }
@@ -555,15 +558,18 @@ html {
     text-align: center;
 }
 
+/* Service Card */
 .service-card {
     background: #ffffff;
     border-radius: 15px;
     padding: 30px 20px;
+    height: 300px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     text-align: center;
     position: relative;
     overflow: hidden;
+    cursor: pointer; /* Makes the card clickable */
 }
 
 .service-card:hover {
@@ -624,7 +630,7 @@ html {
 }
 
 .all-services-text {
-    text-transform: default;
+    text-transform: none;
     letter-spacing: 1px;
 }
 
@@ -632,9 +638,9 @@ html {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-color: #000e79; /* Vibrant red */
+    background-color: #000e79; /* Dark blue background */
     color: #ffffff; /* White arrow */
-    font-size: 1.5rem; /* Slightly larger arrow */
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 50%;
     display: flex;
@@ -643,39 +649,226 @@ html {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hover Effects */
+/* Hover Effects for All Services Button */
 .all-services-link:hover {
-    color: #ff5700; /* Matches the icon's background */
+    color: #ff5700;
 }
 
 .all-services-link:hover .all-services-icon {
     transform: translateX(50px); /* Moves the arrow slightly to the right */
-    background-color: #ff5700; /* Lighter red on hover */
+    background-color: #ff5700;
+}
+
+/* Responsive Services Section Styles */
+@media (max-width: 1024px) {
+    .services-section h2 {
+        font-size: 2.4rem;
+    }
+    .service-card {
+        padding: 25px 15px;
+        height: 280px;
+    }
 }
 
 @media (max-width: 768px) {
+    .services-section {
+        padding: 30px 15px;
+    }
+    
+    .services-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    
     .service-card {
         padding: 20px;
+        height: 260px;
     }
 
     .service-card h3 {
         font-size: 1.3rem;
     }
-
+    
     .service-icon {
         font-size: 1.5rem;
         width: 60px;
         height: 60px;
     }
+    
+    .all-services-link {
+        font-size: 1.3rem;
+    }
+    
+    .all-services-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .services-section {
+        padding: 20px 10px;
+    }
+    
     .services-section h2 {
         font-size: 2rem;
     }
-
+    
+    .service-card {
+        padding: 15px;
+        height: 240px;
+    }
+    
     .service-card p {
         font-size: 0.9rem;
+    }
+    
+    .all-services-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===========================
+   Modal Styles
+   =========================== */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    min-height: 400px;
+    position: relative;
+    animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer !important;
+}
+
+.modal-icon {
+    font-size: 2.5rem;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ff7a00, #ff5700);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    color: #000e79;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* New class for larger modal description text */
+.modal-text-large {
+    font-size: 1.1rem;
+}
+
+/* Responsive Modal Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 15px;
+        width: 95%;
+        min-height: 350px;
+    }
+    
+    .close {
+        top: 5px;
+        right: 15px;
+        font-size: 1.3rem;
+    }
+    
+    .modal-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .modal-description {
+        font-size: 0.9rem;
+    }
+    
+    .modal-text-large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 10px;
+        width: 95%;
+        min-height: 300px;
+    }
+    
+    .close {
+        top: 5px;
+        right: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .modal-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .modal-description {
+        font-size: 0.85rem;
+    }
+    
+    .modal-text-large {
+        font-size: 0.95rem;
     }
 }
 
@@ -891,7 +1084,6 @@ html {
         font-size: 18px;
     }
 }
-
 
 /*------------------------------------------------------------- Footer--------------------------------------------------*/
 /* Footer Styles */
