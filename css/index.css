@@ -1643,3 +1643,23 @@ body {
         font-size: 16px;
     }
 }
+#scrollToTop {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  background-color: rgb(2, 76, 76); /* Background color */
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%; /* Round button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+}
+
+#scrollToTop:hover {
+  background-color: rgb(0, 50, 50); /* Darken the background on hover */
+}
