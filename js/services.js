@@ -88,4 +88,19 @@ document.addEventListener('DOMContentLoaded', function () {
             new bootstrap.Collapse(navbar).show();
         }
     });
+
+  const scrollToTop = document.getElementById("scrollToTop");
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+          scrollToTop.style.display = "block";
+      } else {
+          scrollToTop.style.display = "none";
+      }
+  });
+
+  scrollToTop.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
