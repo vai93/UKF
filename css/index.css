@@ -191,7 +191,9 @@ body {
     pointer-events: none;
 }
 
-.quote-container h1, .quote-container button {
+.quote-container h1, 
+.quote-container .subheading, 
+.quote-container button {
     pointer-events: auto;
 }
 
@@ -200,6 +202,15 @@ body {
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 10px;
+}
+
+/* Subheading Styling */
+.quote-container .subheading {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    opacity: 0.9;
 }
 
 .quote-container button {
@@ -237,6 +248,10 @@ body {
     .quote-container h1 {
         font-size: 2rem;
     }
+
+    .quote-container .subheading {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -255,7 +270,12 @@ body {
     .quote-container h1 {
         font-size: 1.5rem;
     }
+
+    .quote-container .subheading {
+        font-size: 1rem;
+    }
 }
+
 
 /*------------------------------------------------------ Cart -------------------------------------------------------*/
 /* Info Section Container */
@@ -420,6 +440,7 @@ body {
 }
 
 /*------------------------------------------------------------- About us--------------------------------------------------*/
+/* Original CSS */
 #about {
     padding: 40px 0;
     background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
@@ -430,7 +451,7 @@ body {
     font-size: 3.5rem;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 0px;
+    margin-bottom: 10px !important;
     position: relative;
 }
 
@@ -442,26 +463,10 @@ body {
 .about-text p {
     font-size: 1.3rem;
     color: #000000;
-    margin-bottom: 20px;
-    line-height: 1.7;
+    margin-bottom: 13px !important;
+    /* Adjusted line-height to avoid overlapping */
+    line-height: 1.5;
     text-align: justify;
-}
-
-.about-text ul li {
-    font-size: 1.3rem;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.about-text ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about-text ul li i {
-    font-size: 1.3rem;
-    color: #ff5700;
-    margin-right: 10px;
 }
 
 .carousel-inner img {
@@ -501,6 +506,73 @@ body {
     transform: translateY(0);
 }
 
+/* New CSS for extra content row and inner toggle text animation */
+.more-content {
+    max-height: 0;
+    overflow: hidden;
+    /* Original transition for max-height */
+    transition: max-height 0.5s ease;
+    
+    /* For bottom-to-top animation of the entire container */
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    /* Combine transitions so both max-height and fade/slide happen smoothly */
+    transition: max-height 0.5s ease, opacity 0.8s ease, transform 0.8s ease;
+}
+
+.more-content.active {
+    max-height: 2000px; /* Sufficiently high to display all extra content */
+    
+    /* Bottom-to-top fade-in for container */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toggle-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.toggle-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Matching text style for extra content to normal about-text p */
+.more-content p {
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 13px !important;
+    /* Adjusted line-height to avoid overlapping */
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* New UI for toggle button to indicate clickability */
+.toggle-button {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #ff5700;
+    border: 2px solid #ff5700;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.toggle-button:hover {
+    background-color: #ff5700;
+    color: #ffffff;
+}
+/* Override animated-text effect on toggle-button so it remains static */
+.toggle-button.animated-text {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-text h1 {
@@ -508,7 +580,7 @@ body {
     }
 
     .about-text p,
-    .about-text ul li {
+    .more-content p {
         font-size: 1.1rem;
     }
 
@@ -521,6 +593,10 @@ body {
     #about {
         padding: 20px 0;
     }
+
+    .toggle-button{
+        margin-top: 2 0px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -529,12 +605,16 @@ body {
     }
 
     .about-text p,
-    .about-text ul li {
+    .more-content p {
         font-size: 1rem;
     }
 
     .carousel-inner img {
         height: 250px;
+    }
+
+    .toggle-button{
+        margin-top: 10px;
     }
 }
 
@@ -994,16 +1074,18 @@ body {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .right-section p {
     font-size: 25px;
-    line-height: 1.8;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .right-section ul {
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 80px;
     line-height: 1.6;
 }
 
@@ -1084,6 +1166,290 @@ body {
         font-size: 18px;
     }
 }
+
+/*--------------------------------------------------- Network Section ----------------------------------------------------------*/
+.network-section {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
+    position: relative;
+  }
+  
+  .network-section h2 {
+    font-size: 3rem;
+    color: #f6dddd;
+    font-weight: bold;
+    margin-bottom: 20px !important;
+  }
+  
+  .network-section p {
+    font-size: 1.3rem;
+    color: #000000;
+    width: 850px;
+    margin: 0 auto 13px !important;
+    line-height: 1.5;
+    display: block;
+  }
+  
+  .network-info {
+    text-align: left;
+  }
+  
+  .network-info p {
+    width: 100%;
+    margin: 0 0 20px;
+    margin-bottom: 35px !important;
+  }
+  
+  .network-bullet-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .network-bullet-points li {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding-left: 30px; 
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .network-bullet-points li:before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, #007bff 0%, #0056b3 100%);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+  
+  .network-diagram {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  
+  .network-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .network-line {
+    stroke: #aaa;
+    stroke-width: 2;
+    stroke-dasharray: 5,5;
+    animation: dash 2s linear infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 20;
+    }
+  }
+  
+  .network-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .network-node {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    transition: transform 0.3s ease;
+  }
+  
+  .network-node:hover {
+    transform: scale(1.1);
+  }
+  
+  .node-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #007bff; 
+  }
+  
+  .node-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .node-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 2px solid #fff;
+    text-align: center;
+  }
+  
+  .region-title {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .region-countries {
+    font-size: 0.7rem;
+    color: #ffcc00;
+    line-height: 1.2;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .network-diagram {
+      width: 300px;
+      height: 300px;
+    }
+    .network-center {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+    }
+    .network-node {
+      width: 70px;
+      height: 70px;
+    }
+    .node-label {
+      font-size: 0.6rem;
+      bottom: -15px;
+    }
+  }
+  
+  /* Additional Responsive Overrides to Center & Scale the Diagram */
+  @media (max-width: 767px) {
+    .network-diagram {
+      /* Scale the entire diagram to 60% of its original size and center it */
+      transform: scale(0.6) !important;
+      transform-origin: top center !important;
+      margin: 0 auto !important;
+      margin-right: 160px !important;
+    }
+    .network-center {
+      left: 72% !important;
+      top: 72% !important;
+    }
+  }
+  
+  /* Additional responsive typography adjustments */
+  @media (max-width: 767px) {
+    .network-section p {
+      width: 100% !important;
+      font-size: 1.1rem;
+    }
+    .network-section h2 {
+      font-size: 2rem !important;
+    }
+    .network-bullet-points li {
+        font-size: 1.1rem;
+
+      }
+      
+  }
+
+  /*--------------------------------------------------- Why Choose Us Section ----------------------------------------------------------*/
+  .why-choose-us-section {
+    padding: 80px 0;
+    background: #f6f6f6;
+  }
+  
+  .why-choose-us-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .why-choose-us-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .why-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .why-benefits li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 35px;
+  }
+  
+  .why-benefits li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007bff;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  /* Image styling */
+  .why-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .why-choose-us-section {
+      padding: 40px 20px;
+    }
+    .why-choose-us-section h2 {
+        margin-top: 20px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .why-choose-us-section p{
+        text-align: center;
+        font-size: 1.1rem;
+
+
+    }
+    .why-benefits {
+        font-size: 1.1rem;
+
+    }
+  }
+  
 
 /*------------------------------------------------------------- Footer--------------------------------------------------*/
 /* Footer Styles */

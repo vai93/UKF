@@ -116,3 +116,45 @@ document.getElementById('learnMoreButton').addEventListener('click', () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
 
+      // Animate on scroll for original animated-text elements (excluding toggle-text)
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.animated-text:not(.toggle-text)');
+        elements.forEach(element => {
+            const elementPos = element.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+            if (elementPos < screenPos) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+    
+    function toggleContent() {
+        var moreContent = document.getElementById('moreContent');
+        var toggleText = document.getElementById('toggleText');
+        var toggleButton = document.getElementById('toggleButton');
+
+        if (moreContent.classList.contains('active')) {
+            // Collapse extra content
+            moreContent.classList.remove('active');
+            toggleText.classList.remove('active');
+            toggleButton.innerText = 'Read More';
+
+            // Force reflow to reset the animation so it can play again
+            void moreContent.offsetWidth;
+            void toggleText.offsetWidth;
+
+        } else {
+            // Expand extra content
+            moreContent.classList.add('active');
+            // Short delay so container can expand first, then text animates
+            setTimeout(() => {
+                toggleText.classList.add('active');
+            }, 50);
+
+            toggleButton.innerText = 'Read Less';
+        }
+    }

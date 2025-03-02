@@ -1,291 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="path/to/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
 
-<body>
-    <div id="header">
-        <video autoplay muted loop id="background-video">
-            <source src="img/shipvidio.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="container">
-            <nav
-                class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
-                <a href="#" class="navbar-brand">
-                    <img src="img/ukf2.png" class="logo" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#header">
-                                <i class="fas fa-home"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">
-                                <i class="fas fa-info-circle"></i> About us
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">
-                                <i class="fas fa-concierge-bell"></i>
-                                Services
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactus.html">
-                                <i class="fas fa-envelope"></i> Contact Us
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#career">
-                                <i class="fas fa-briefcase"></i> Career
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-primary rounded-pill px-4">Get
-                                A Quote</button>
-                        </li>
-                    </ul>
+    <body>
+        <div id="header">
+            <video autoplay muted loop id="background-video">
+                <source src="img/shipvidio.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="container">
+                <nav
+                    class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
+                    <a href="#" class="navbar-brand">
+                        <img src="img/ukf2.png" class="logo" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#header">
+                                    <i class="fas fa-home"></i> Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">
+                                    <i class="fas fa-info-circle"></i> About us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.html">
+                                    <i class="fas fa-envelope"></i> Contact Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#career">
+                                    <i class="fas fa-briefcase"></i> Career
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    class="btn btn-primary rounded-pill px-4">Get
+                                    A Quote</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="quote-container">
+                    <h1>Your Trusted Partner in Global Logistics</h1>
+                    <h3 class="subheading">Efficient, Reliable, and Secure
+                        Transportation Solutions</h3>
+                    <button id="learnMoreButton"
+                        class="btn btn-secondary px-4 mt-3">Learn More</button>
                 </div>
-            </nav>
-            <div class="quote-container">
-                <h1>“Shipping Beyond Boundaries”</h1>
-                <button id="learnMoreButton" class="btn btn-secondary px-4 mt-3">Learn More</button>
             </div>
         </div>
-    </div>
 
-    <div class="sidebar d-md-none" id="sidebarMenu">
-        <span class="close-btn">&times;</span>
-        <ul>
-            <li><a href="#header"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about"><i class="fas fa-info-circle"></i> About
-                    us</a></li>
-            <li><a href="#services"><i class="fas fa-concierge-bell"></i>
-                    Services</a></li>
-            <li><a href="contactus.html"><i class="fas fa-envelope"></i>
-                    Contact Us</a></li>
-            <li><a href="#career"><i class="fas fa-briefcase"></i>
-                    Career</a></li>
-            <li>
-                <button class="btn btn-primary rounded-pill px-4">Get A
-                    Quote</button>
-            </li>
-        </ul>
-    </div>
-
-    <!-----------------------------------------------Cart--------------------------------------------------------->
-    <div class="info-section" id="infoSection">
-        <div class="info-card">
-            <div class="card-icon-container">
-                <i class="fas fa-file-alt info-icon"></i>
-            </div>
-            <h3>E-Quote</h3>
-            <p>No need to wait, get a freight quote in a matter of
-                minutes.</p>
-            <a href="#" class="info-link">Get a Quote</a>
+        <div class="sidebar d-md-none" id="sidebarMenu">
+            <span class="close-btn">&times;</span>
+            <ul>
+                <li><a href="#header"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About
+                        us</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i>
+                        Services</a></li>
+                <li><a href="contactus.html"><i class="fas fa-envelope"></i>
+                        Contact Us</a></li>
+                <li><a href="#career"><i class="fas fa-briefcase"></i>
+                        Career</a></li>
+                <li>
+                    <button class="btn btn-primary rounded-pill px-4">Get A
+                        Quote</button>
+                </li>
+            </ul>
         </div>
-        <div class="info-card">
-            <div class="card-icon-container">
-                <i class="fas fa-calendar-alt info-icon"></i>
-            </div>
-            <h3>Schedules</h3>
-            <p>Stay ahead. Prepare and plan your next shipment and
-                delivery.</p>
-            <a href="#" class="info-link">View Schedules</a>
-        </div>
-        <div class="info-card">
-            <div class="card-icon-container">
-                <i class="fas fa-building info-icon"></i>
-            </div>
-            <h3>Offices</h3>
-            <p>With more than 44 offices across 15 countries, we’re ready to
-                support you.</p>
-            <a href="#" class="info-link">Our Offices</a>
-        </div>
-    </div>
 
-    <!-----------------------------------------------About us--------------------------------------------------------->
-
-    <section id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 about-text">
-                    <h1 class="animated-text">About <span class="highlight">Us</span></h1>
-                    <p class="animated-text">
-                        At UKF Shipping, we are dedicated to transforming
-                        the logistics and shipping industry by providing
-                        reliable, innovative, and customer-focused
-                        solutions. With a global network and advanced
-                        technology, we ensure seamless delivery of goods
-                        across borders while maintaining the highest
-                        standards of safety and efficiency. Our team of
-                        experienced professionals is committed to offering
-                        personalized services that cater to the unique needs
-                        of every client, making international trade and
-                        transport hassle-free. </p>
-                    <ul>
-                        <li class="list"><i class="fas fa-anchor"></i>
-                            Reliable Shipping Services</li>
-                        <li class="list"><i class="fas fa-ship"></i> Global
-                            Coverage</li>
-                        <li class="list"><i class="fas fa-box-open"></i>
-                            Safe & Secure Cargo</li>
-                        <li class="list"><i class="fas fa-globe"></i>
-                            Sustainable Practices</li>
-                    </ul>
+        <!-----------------------------------------------Cart--------------------------------------------------------->
+        <div class="info-section" id="infoSection">
+            <div class="info-card">
+                <div class="card-icon-container">
+                    <i class="fas fa-file-alt info-icon"></i>
                 </div>
-                <div class="col-lg-6 col-md-12 about-image">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                        data-bs-interval="3000">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/ship.jpeg" class="d-block w-100 animated-text" alt="Shipping Image 1">
+                <h3>E-Quote</h3>
+                <p>No need to wait, get a freight quote in a matter of
+                    minutes.</p>
+                <a class="info-link">Get a Quote</a>
+            </div>
+            <div class="info-card">
+                <div class="card-icon-container">
+                    <i class="fas fa-globe info-icon"></i>
+                </div>
+                <h3>Network</h3>
+                <p>
+                    Global reach: Asia, Oceania, North America, Europe & Middle
+                    East/Africa.
+                </p>
+                <a href="#network" class="info-link">Explore Network</a>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon-container">
+                    <i class="fas fa-building info-icon"></i>
+                </div>
+                <h3>Office</h3>
+                <p>With more than 44 offices across 15 countries, we’re ready to
+                    support you.</p>
+                <a class="info-link">Our Offices</a>
+            </div>
+        </div>
+
+        <!-----------------------------------------------About us--------------------------------------------------------->
+
+        <section id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 about-text">
+                        <h1 class="animated-text">About <span
+                                class="highlight">Us</span></h1>
+                        <p class="animated-text">
+                            Your Trusted Partner in Global Logistics
+                        </p>
+                        <p class="animated-text">
+                            In today's interconnected world, businesses need a
+                            logistics partner they can rely on. UKF Services was
+                            founded in 2008 with the vision of simplifying
+                            complex supply chains and empowering businesses to
+                            thrive in the international marketplace. We
+                            understand the challenges of moving goods across
+                            borders, and we're dedicated to providing innovative
+                            and reliable solutions that streamline the entire
+                            process.
+                        </p>
+                        <p class="animated-text">
+                            At UKF Services, we're more than just a freight
+                            forwarder; we're your strategic partner in global
+                            trade. We specialize in navigating the complexities
+                            of international freight, offering comprehensive
+                            solutions for air, sea, and land transport, ensuring
+                            your goods reach their destination efficiently and
+                            cost-effectively. Whether you're shipping small
+                            parcels or oversized cargo, we have the expertise
+                            and resources to handle it with care and precision.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-image">
+                        <div id="carouselExampleFade"
+                            class="carousel slide carousel-fade"
+                            data-bs-ride="carousel"
+                            data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/ship.jpeg"
+                                        class="d-block w-100 animated-text"
+                                        alt="Shipping Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/ship4.jpeg"
+                                        class="d-block w-100 animated-text"
+                                        alt="Shipping Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/ship5.jpeg"
+                                        class="d-block w-100 animated-text"
+                                        alt="Shipping Image 3">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="img/ship4.jpeg" class="d-block w-100 animated-text" alt="Shipping Image 2">
+                        </div>
+                    </div>
+                </div>
+                <!-- Extra content row below the main row (full width) -->
+                <div id="moreContent" class="more-content">
+                    <!-- Added wrapper for extra text -->
+                    <div id="toggleText" class="toggle-text">
+                        <p class="animated-text">
+                            We also handle comprehensive logistics solutions for
+                            other locations worldwide.
+                        </p>
+                        <p class="animated-text">
+                            At the heart of our operations is a commitment to
+                            leveraging cutting-edge technology. We utilize a
+                            range of advanced tools to optimize your supply
+                            chain and provide unparalleled visibility. For
+                            instance, we employ real-time GPS tracking to
+                            provide complete insight into the location and
+                            status of your shipments 24/7. Our advanced
+                            Transportation Management System (TMS) optimizes
+                            routes, manages shipments, and provides real-time
+                            reporting, resulting in significant cost savings and
+                            improved delivery times.
+                        </p>
+                        <p class="animated-text">
+                            Furthermore, we leverage IoT (Internet of Things)
+                            sensors to monitor critical cargo conditions such as
+                            temperature, humidity, and shock, ensuring the
+                            integrity of your goods, especially for sensitive
+                            shipments. This technology allows us to proactively
+                            address potential issues and maintain the highest
+                            standards of care. Our cloud-based platforms
+                            facilitate seamless communication and collaboration
+                            between all stakeholders, keeping everyone informed
+                            and connected throughout the shipping process.
+                        </p>
+                        <p class="animated-text">
+                            At UKF Services, we are guided by a set of core
+                            values that include integrity, reliability,
+                            innovation, and customer focus. We believe in
+                            building long-term relationships with our clients
+                            based on trust, transparency, and mutual success.
+                            Our mission is to provide seamless and cost-eff.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="toggle-button" id="toggleButton"
+                        onclick="toggleContent()">Read More</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="path/to/bootstrap.bundle.min.js"></script>
+
+        <!-----------------------------------------------OUR Services--------------------------------------------------------->
+
+        <!-- Include AOS CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Services</h2>
+                <div class="row gx-5 gy-4">
+                    <div class="col-md-4" data-aos="fade-right"
+                        data-aos-duration="1000">
+                        <div class="service-card" data-title="Ocean Freight"
+                            data-description="Ocean freight is one of the most cost-effective methods for transporting large-volume shipments across international waters. It is ideal for businesses dealing with bulk goods, heavy equipment, and raw materials that do not require immediate delivery. With Full Container Load (FCL) and Less than Container Load (LCL) options, ocean freight provides flexibility to accommodate different shipment sizes and budgets. Additionally, specialized services such as refrigerated containers and breakbulk cargo handling ensure the safe transport of temperature-sensitive and oversized goods.">
+                            <div class="service-icon">
+                                <i class="fas fa-ship"></i>
                             </div>
-                            <div class="carousel-item">
-                                <img src="img/ship5.jpeg" class="d-block w-100 animated-text" alt="Shipping Image 3">
+                            <h3>Ocean Freight</h3>
+                            <p>Cost-effective solutions for large-volume
+                                shipments across the globe.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-right"
+                        data-aos-duration="1200">
+                        <div class="service-card" data-title="Air Freight"
+                            data-description="Air freight offers the fastest and most reliable transportation solution for time-sensitive shipments. It is widely used for high-value goods, pharmaceuticals, electronics, and perishable products requiring urgent delivery. With direct airline partnerships, air freight ensures seamless cargo movement across global destinations, reducing transit time significantly compared to other shipping methods. Enhanced security measures, real-time tracking, and customs brokerage services further improve the efficiency of air freight operations.">
+                            <div class="service-icon">
+                                <i class="fas fa-plane"></i>
                             </div>
+                            <h3>Air Freight</h3>
+                            <p>Fast and reliable transport for time-sensitive
+                                cargo.</p>
                         </div>
                     </div>
+                    <div class="col-md-4" data-aos="fade-right"
+                        data-aos-duration="1400">
+                        <div class="service-card" data-title="Road Freight"
+                            data-description="Road freight is a flexible and efficient overland transport solution suitable for short to medium distances. It offers direct door-to-door delivery, reducing handling time and the risk of cargo damage. With various vehicle options, including trucks, trailers, and specialized transporters, road freight accommodates different cargo types, from perishable goods to heavy machinery. GPS tracking and route optimization ensure timely deliveries while enhancing supply chain efficiency.">
+                            <div class="service-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3>Road Freight</h3>
+                            <p>Flexible and efficient overland transport
+                                solutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-left"
+                        data-aos-duration="1000">
+                        <div class="service-card" data-title="Custome Clearance"
+                            data-description="Customs clearance services facilitate smooth import and
+                    export operations by handling regulatory compliance,
+                    documentation, and duty payments. Trained customs
+                    brokers ensure shipments meet all legal requirements,
+                    preventing delays and penalties. By managing paperwork,
+                    tariff classifications, and customs duties, businesses
+                    can navigate international trade seamlessly.">
+                            <div class="service-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h3>Custome Clearance</h3>
+                            <p>Streamlined import and export customs clearance
+                                services.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-left"
+                        data-aos-duration="1200">
+                        <div class="service-card"
+                            data-title="Cross Border Road Services"
+                            data-description="Cross-border road freight services provide seamless
+                    transportation for shipments moving across international
+                    borders. This service ensures compliance with customs
+                    regulations, trade agreements, and security protocols,
+                    enabling efficient cross-country trade. Dedicated
+                    trucking solutions allow for the transport of diverse
+                    cargo, including perishable goods, industrial products,
+                    and retail merchandise.">
+                            <div class="service-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h3>Cross Border Road Services</h3>
+                            <p>Seamless transportation across international
+                                borders by road.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-left"
+                        data-aos-duration="1400">
+                        <div class="service-card" data-title="Incoterms"
+                            data-description="Incoterms (International Commercial Terms) define
+                    responsibilities between buyers and sellers in global
+                    trade transactions. Expertise in managing shipments
+                    under different Incoterms, such as EXW (Ex Works), DDP
+                    (Delivered Duty Paid), DDU (Delivered Duty Unpaid), FOB
+                    (Free on Board), and C&F (Cost and Freight), ensures
+                    compliance and clarity in shipping agreements.">
+                            <div class="service-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Incoterms</h3>
+                            <p>Expertise in managing shipments under various
+                                Incoterms, including EXW, DDP, DDU, FOB, and
+                                C&F.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-services">
+                    <a href="services.html" class="all-services-link">
+                        <span class="all-services-text">Explore All
+                            Services</span>
+                        <span class="all-services-icon">➤</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="serviceModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-icon"></div>
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-description modal-text-large"></p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <script>
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animated-text');
-            elements.forEach(element => {
-                const elementPos = element.getBoundingClientRect().top;
-                const screenPos = window.innerHeight / 1.3;
-                if (elementPos < screenPos) {
-                    element.classList.add('active');
-                } else {
-                    element.classList.remove('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-    </script>
-
-    <!-----------------------------------------------OUR Services--------------------------------------------------------->
-
-    <!-- Include AOS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row gx-5 gy-4">
-                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="service-card" data-title="Ocean Freight (Import & Export)"
-                        data-description="Ocean freight is one of the most cost-effective methods for transporting large-volume shipments across international waters. It is ideal for businesses dealing with bulk goods, heavy equipment, and raw materials that do not require immediate delivery. With Full Container Load (FCL) and Less than Container Load (LCL) options, ocean freight provides flexibility to accommodate different shipment sizes and budgets. Additionally, specialized services such as refrigerated containers and breakbulk cargo handling ensure the safe transport of temperature-sensitive and oversized goods.">
-                        <div class="service-icon">
-                            <i class="fas fa-ship"></i>
-                        </div>
-                        <h3>Ocean Freight (Import & Export)</h3>
-                        <p>Cost-effective solutions for large-volume
-                            shipments across the globe.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1200">
-                    <div class="service-card" data-title="Air Freight (Import & Export)"
-                        data-description="Air freight offers the fastest and most reliable transportation solution for time-sensitive shipments. It is widely used for high-value goods, pharmaceuticals, electronics, and perishable products requiring urgent delivery. With direct airline partnerships, air freight ensures seamless cargo movement across global destinations, reducing transit time significantly compared to other shipping methods. Enhanced security measures, real-time tracking, and customs brokerage services further improve the efficiency of air freight operations.">
-                        <div class="service-icon">
-                            <i class="fas fa-plane"></i>
-                        </div>
-                        <h3>Air Freight (Import & Export)</h3>
-                        <p>Fast and reliable transport for time-sensitive
-                            cargo.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1400">
-                    <div class="service-card" data-title="Road Freight"
-                        data-description="Road freight is a flexible and efficient overland transport solution suitable for short to medium distances. It offers direct door-to-door delivery, reducing handling time and the risk of cargo damage. With various vehicle options, including trucks, trailers, and specialized transporters, road freight accommodates different cargo types, from perishable goods to heavy machinery. GPS tracking and route optimization ensure timely deliveries while enhancing supply chain efficiency.">
-                        <div class="service-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Road Freight</h3>
-                        <p>Flexible and efficient overland transport
-                            solutions.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="service-card" data-title="Rail Freight"
-                        data-description="Rail freight is a cost-effective and environmentally friendly transport solution for long-distance shipments. It is ideal for moving bulk commodities, including industrial goods, construction materials, and agricultural products. Rail transport significantly reduces fuel consumption and carbon emissions compared to road and air transport, making it a sustainable logistics option. With fixed schedules and dedicated rail networks, rail freight ensures reliable and secure transportation.">
-                        <div class="service-icon">
-                            <i class="fas fa-train"></i>
-                        </div>
-                        <h3>Rail Freight</h3>
-                        <p>Environmentally friendly and cost-effective
-                            transport for long distances.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1200">
-                    <div class="service-card" data-title="Project Cargo"
-                        data-description="Project cargo involves specialized handling and logistics solutions for oversized, heavy, or complex shipments. Industries such as oil and gas, construction, energy, and manufacturing frequently require project cargo services for transporting large equipment and industrial machinery. This service includes route planning, securing necessary permits, and using heavy-lift equipment to ensure safe transport.">
-                        <div class="service-icon">
-                            <i class="fas fa-cubes"></i>
-                        </div>
-                        <h3>Project Cargo</h3>
-                        <p>Specialized handling and logistics for oversized
-                            and complex cargo.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1400">
-                    <div class="service-card" data-title="Warehousing & Distribution"
-                        data-description="Warehousing and distribution services offer secure storage solutions and streamlined supply chain management for businesses. Modern warehouses are equipped with advanced inventory tracking systems, climate control, and high-security measures to protect goods. These facilities support various storage needs, including short-term and long-term inventory management, cross-docking, and fulfillment services.">
-                        <div class="service-icon">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
-                        <h3>Warehousing & Distribution</h3>
-                        <p>Secure storage and efficient distribution
-                            solutions.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="all-services">
-                <a href="services.html" class="all-services-link">
-                    <span class="all-services-text">Explore All
-                        Services</span>
-                    <span class="all-services-icon">➤</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-body">
-                <div class="modal-icon"></div>
-                <h3 class="modal-title"></h3>
-                <p class="modal-description modal-text-large"></p>
-            </div>
-        </div>
-    </div>
-
-    <script>
+        <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get the modal elements
             var modal = document.getElementById("serviceModal");
@@ -329,73 +413,220 @@
             });
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
         AOS.init(); // Initialize AOS animations
     </script>
 
-    <!------------------------------------------------ Visionn ------------------------------------------------>
-    <section id="vision" class="services-section">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <!-- Left Section -->
-                <div class="col-md-4 mb-4">
-                    <div class="left-section">
-                        <ul id="navigation">
-                            <li data-content="vision" class="active">Vision</li>
-                            <li data-content="mission">Mission</li>
-                            <li data-content="values">Core Values</li>
+        <!------------------------------------------------------ Network Section HTML ---------------------------------------------->
+        <!-- Network Section HTML -->
+        <section id="network" class="network-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Side: Heading, Description, and Bullet Points -->
+                    <div class="col-lg-6 col-md-12 network-info">
+                        <h2 class="animated-text mb-4">
+                            Our <span class="highlight">Global Network</span>
+                        </h2>
+                        <p class="animated-text mb-5">
+                            We serve a diverse range of industries, including
+                            manufacturing, retail, technology, and healthcare.
+                            Our extensive network of trusted partners spans the
+                            globe, enabling us to provide seamless
+                            transportation solutions to and from key regions.
+                        </p>
+                        <ul class="network-bullet-points animated-text">
+                            <li><strong>Asia:</strong> India, China, Japan</li>
+                            <li><strong>Oceania:</strong> Australia, New
+                                Zealand</li>
+                            <li><strong>North America:</strong> USA, Canada</li>
+                            <li><strong>Europe:</strong> UK, and other European
+                                countries</li>
+                            <li><strong>Middle East &amp; Africa:</strong> All
+                                of Middle East &amp; Africa</li>
                         </ul>
                     </div>
-                </div>
-
-                <!-- Right Section -->
-                <div class="col-md-6">
-                    <div class="right-section">
-                        <div id="vision-content" class="fade-in visible">
-                            <h3>Vision</h3>
-                            <p>Freight Systems will constantly exceed
-                                customer expectations by providing
-                                innovative logistics solutions.</p>
-                        </div>
-                        <div id="mission-content" class="fade-in" style="display: none;">
-                            <h3>Mission</h3>
-                            <p>
-                                Freight Systems is committed to:
-                            <ul class="text-start">
-                                <li>Creating customized solutions</li>
-                                <li>Investing in people and
-                                    technology</li>
-                                <li>Maintaining 100% statutory and
-                                    regulatory compliance</li>
-                                <li>Delivering results</li>
-                                <li>Providing end-to-end supply chain
-                                    solutions through an efficient
-                                    global network</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div id="values-content" class="fade-in" style="display: none;">
-                            <h3>Core Values</h3>
-                            <p>
-                                Our Core Values are:
-                            <ul class="text-start">
-                                <li>Outcome Focused</li>
-                                <li>Respect and Integrity</li>
-                                <li>Innovation</li>
-                                <li>Customer Experience</li>
-                            </ul>
-                            </p>
+                    <!-- Right Side: Diagram (Unchanged Code) -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="network-diagram">
+                            <!-- Animated Connection Lines -->
+                            <svg class="network-lines" width="500" height="500"
+                                viewBox="0 0 500 500">
+                                <line x1="250" y1="250" x2="250" y2="50"
+                                    class="network-line" />
+                                <line x1="250" y1="250" x2="60" y2="188"
+                                    class="network-line" />
+                                <line x1="250" y1="250" x2="132" y2="412"
+                                    class="network-line" />
+                                <line x1="250" y1="250" x2="368" y2="412"
+                                    class="network-line" />
+                                <line x1="250" y1="250" x2="440" y2="188"
+                                    class="network-line" />
+                            </svg>
+                            <!-- Central Globe Icon -->
+                            <div class="network-center animated-text"
+                                style="left:210px; top:210px;">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <!-- Region Nodes -->
+                            <div class="network-node animated-text"
+                                style="left:200px; top:10px;">
+                                <div class="node-img-wrapper">
+                                    <img src="img/asian.avif" alt="Asia"
+                                        class="node-icon">
+                                </div>
+                                <div class="node-label"
+                                    style="width: 120px; text-align:center; bottom: -25px;">
+                                    <div class="region-title">Asia</div>
+                                    <div class="region-countries">India, China,
+                                        Japan</div>
+                                </div>
+                            </div>
+                            <div class="network-node animated-text"
+                                style="left:20px; top:150px;">
+                                <div class="node-img-wrapper">
+                                    <img src="img/north_america.jpg"
+                                        alt="North America" class="node-icon">
+                                </div>
+                                <div class="node-label"
+                                    style="width: 120px; text-align:center; bottom: -25px;">
+                                    <div class="region-title">North
+                                        America</div>
+                                    <div class="region-countries">USA,
+                                        Canada</div>
+                                </div>
+                            </div>
+                            <div class="network-node animated-text"
+                                style="left:70px; top:352px;">
+                                <div class="node-img-wrapper">
+                                    <img src="img/europe.png" alt="Europe"
+                                        class="node-icon">
+                                </div>
+                                <div class="node-label"
+                                    style="width: 120px; text-align:center; bottom: -37px;">
+                                    <div class="region-title">Europe</div>
+                                    <div class="region-countries">UK, and other
+                                        European countries</div>
+                                </div>
+                            </div>
+                            <div class="network-node animated-text"
+                                style="left:320px; top:352px;">
+                                <div class="node-img-wrapper">
+                                    <img src="img/oceania.png" alt="Oceania"
+                                        class="node-icon">
+                                </div>
+                                <div class="node-label"
+                                    style="width: 120px; text-align:center; bottom: -37px;">
+                                    <div class="region-title">Oceania</div>
+                                    <div class="region-countries">Australia, New
+                                        Zealand</div>
+                                </div>
+                            </div>
+                            <div class="network-node animated-text"
+                                style="left:380px; top:145px;">
+                                <div class="node-img-wrapper">
+                                    <img src="img/east_north_africa.png"
+                                        alt="Middle East &amp; Africa"
+                                        class="node-icon">
+                                </div>
+                                <div class="node-label"
+                                    style="width: 160px; text-align:center; bottom: -25px;">
+                                    <div class="region-title">Middle East &amp;
+                                        Africa</div>
+                                    <div class="region-countries">All of Middle
+                                        East &amp; Africa</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Bootstrap JS and Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+        <!-- Why Choose Us Section HTML -->
+  <section id="why-choose-us" class="why-choose-us-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Image -->
+        <div class="col-lg-6 col-md-12 why-image">
+          <!-- Replace the src with your own image path -->
+          <img src="img/why_choose.jpg" alt="Why Choose Us" class="img-fluid animated-text">
+        </div>
+        <!-- Right Column: Text Content -->
+        <div class="col-lg-6 col-md-12 why-text">
+          <h2 class="animated-text">Why Choose Us?</h2>
+          <p class="animated-text">
+            Fast, reliable global logistics solutions. We leverage our extensive network and local expertise to optimize your supply chain, ensuring on‑time delivery and minimizing costs. Dedicated support and transparent communication every step of the way.
+          </p>
+          <ul class="why-benefits animated-text">
+            <li><i class="fas fa-check-circle"></i> Fast &amp; Reliable Solutions</li>
+            <li><i class="fas fa-check-circle"></i> Extensive Global Network</li>
+            <li><i class="fas fa-check-circle"></i> Local Expertise &amp; On‑time Delivery</li>
+            <li><i class="fas fa-check-circle"></i> Cost Optimization</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated Support &amp; Transparent Communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!------------------------------------------------ Visionn ------------------------------------------------>
+        <section id="vision" class="services-section">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <!-- Left Section -->
+                    <div class="col-md-4 mb-4">
+                        <div class="left-section">
+                            <ul id="navigation">
+                                <li data-content="vision"
+                                    class="active">Vision</li>
+                                <li data-content="mission">Mission</li>
+                                <li data-content="values">Core Values</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-md-6">
+                        <div class="right-section">
+                            <div id="vision-content" class="fade-in visible">
+                                <h3>Vision</h3>
+                                <p>To be the most trusted and reliable global
+                                    logistics partner, delivering exceptional
+                                    value and building long-term relationships
+                                    through seamless execution and
+                                    customer-centric solutions.</p>
+                            </div>
+                            <div id="mission-content" class="fade-in"
+                                style="display: none;">
+                                <h3 style="margin-left:90px;">Mission</h3>
+                                <p style="width: 600px; margin-left:-50px">
+                                    As a family-owned freight forwarding company with 16 years of experience in the UAE, based in Dubai, we simplify global trade with reliable, personalized logistics solutions. Our deep local knowledge and commitment to long-term partnerships ensure seamless and efficient cargo movement. Trust, integrity, and open communication are at the core of everything we do.
+                                </p>
+                            </div>
+                            <div id="values-content" class="fade-in"
+                                style="display: none;">
+                                <h3>Core Values</h3>
+                                <p>
+                                    <ul class="text-start">
+                                        <li>Outcome Focused</li>
+                                        <li>Respect and Integrity</li>
+                                        <li>Innovation</li>
+                                        <li>Customer Experience</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap JS and Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
         document.addEventListener("DOMContentLoaded", () => {
             const navItems = document.querySelectorAll("#navigation li");
             const sections = {
@@ -432,54 +663,56 @@
         });
     </script>
 
-    <!------------------------------------------------ Footer Section ------------------------------------------------>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/ukf2.png" alt="Logo">
-                <p>The faster, easier way to book and manage your
-                    international shipments</p>
-                <span>Copyright © 2023 Bankar.</span>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Products</h4>
-                <ul>
-                    <li><a href="#">Container Leasing</a></li>
-                    <li><a href="#">Container Trading</a></li>
-                    <li><a href="#">Ocean Freight</a></li>
-                    <li><a href="#">Container Control</a></li>
-                    <li><a href="#">Container Tracking</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h4>Join our newsletter</h4>
-                <form>
-                    <input type="email" placeholder="Enter email address">
-                    <button type="submit">→</button>
-                </form>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <!------------------------------------------------ Footer Section ------------------------------------------------>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="img/ukf2.png" alt="Logo">
+                    <p>The faster, easier way to book and manage your
+                        international shipments</p>
+                    <span>Copyright © 2023 Bankar.</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Container Leasing</a></li>
+                        <li><a href="#">Container Trading</a></li>
+                        <li><a href="#">Ocean Freight</a></li>
+                        <li><a href="#">Container Control</a></li>
+                        <li><a href="#">Container Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Join our newsletter</h4>
+                    <form>
+                        <input type="email" placeholder="Enter email address">
+                        <button type="submit">→</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        </footer>
+        <script src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
-</body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
 
 </html>
