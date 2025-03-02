@@ -450,7 +450,7 @@ body {
 .about-text h1 {
     font-size: 3.5rem;
     font-weight: bold;
-    color: #ffffff;
+    color:#f1efef;
     margin-bottom: 10px !important;
     position: relative;
 }
@@ -461,7 +461,7 @@ body {
 }
 
 .about-text p {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     color: #000000;
     margin-bottom: 13px !important;
     /* Adjusted line-height to avoid overlapping */
@@ -488,6 +488,7 @@ body {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    color:#35393d;
 }
 
 .animated-text.active {
@@ -542,11 +543,11 @@ body {
 
 /* Matching text style for extra content to normal about-text p */
 .more-content p {
-    font-size: 1.3rem;
-    color: #000000;
+    font-size: 1.2rem;
+    color:#35393d;
     margin-bottom: 13px !important;
     /* Adjusted line-height to avoid overlapping */
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: justify;
 }
 
@@ -961,8 +962,9 @@ body {
 
 .about-text h1 {
     font-size: 3.5rem;
+    margin-top:30px;
     font-weight: bold;
-    color: #ffffff;
+    color: #f1efef;
     margin-bottom: 0px;
     position: relative;
 }
@@ -973,16 +975,17 @@ body {
 }
 
 .about-text p {
-    font-size: 1.3rem;
-    color: #000000;
+    font-size: 1.2rem;
+    color: #35393d;
     margin-bottom: 20px;
-    line-height: 1.7;
+    line-height: 1.6;
     text-align: justify;
+    margin-right: 10px;
 }
 
 .about-text ul li {
     font-size: 1.3rem;
-    color: #000000;
+    color: #35393d;
     margin-bottom: 10px;
 }
 
@@ -1051,7 +1054,7 @@ body {
 }
 
 .left-section ul li {
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: color 0.3s, font-weight 0.3s;
@@ -1065,9 +1068,9 @@ body {
 
 .right-section {
     text-align: start;
-    padding: 20px;
+    padding: 5px;
     background: transparent;
-    margin-left: 200px;
+    margin-left: 150px;
 }
 
 .right-section h3 {
@@ -1078,7 +1081,7 @@ body {
 }
 
 .right-section p {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.5;
     text-align: center;
 }
@@ -1176,14 +1179,14 @@ body {
   
   .network-section h2 {
     font-size: 3rem;
-    color: #f6dddd;
+    color: #f1efef;
     font-weight: bold;
     margin-bottom: 20px !important;
   }
   
   .network-section p {
     font-size: 1.3rem;
-    color: #000000;
+    color: #35393d;
     width: 850px;
     margin: 0 auto 13px !important;
     line-height: 1.5;
@@ -1648,9 +1651,9 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99;
+  z-index: 9999;
   font-size: 24px;
-  background-color: rgb(2, 76, 76); /* Background color */
+  background-color: rgb(41, 106, 210); /* Background color */
   color: white;
   border: none;
   outline: none;
@@ -1661,5 +1664,5 @@ body {
 }
 
 #scrollToTop:hover {
-  background-color: rgb(0, 50, 50); /* Darken the background on hover */
+  background-color: rgb(55, 46, 235); /* Darken the background on hover */
 }
