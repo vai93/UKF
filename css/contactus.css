@@ -341,7 +341,6 @@ label {
 @media (max-width: 768px) {
     .contact-section {
         flex-direction: column;
-        margin: 1rem;
     }
 
     .info-section, .form-section {
@@ -362,6 +361,9 @@ label {
 }
 
 @media (max-width: 480px) {
+    .contact-section{
+        margin-top: 60px;
+    }
     .info-section, .form-section {
         padding: 20px;
     }
@@ -391,7 +393,6 @@ label {
 
 /*------------------------------------------------------------- Footer--------------------------------------------------*/
 
-/* Footer Styles */
 .footer {
     background-color: #111;
     color: #fff;
@@ -406,6 +407,17 @@ label {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.footer-contact h4 {
+    color: #a4c2ff;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.footer-contact p {
+    margin-left: 5px;
+    color: #fff;
 }
 
 .footer-logo {
@@ -459,69 +471,42 @@ label {
     color: #fff;
 }
 
-.footer-newsletter {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.footer-newsletter h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer-newsletter form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.footer-newsletter input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    margin-right: 10px;
-}
-
-.footer-newsletter button {
-    padding: 10px 15px;
-    background-color: #f60;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.footer-newsletter button:hover {
-    background-color: #ff7700;
-}
-
 .social-icons {
     display: flex;
     gap: 15px;
 }
 
+/* Updated Social Icons Styles with outline border and border-radius */
 .social-icons a {
-    color: #999;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 15px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 8px;
 }
 
 .social-icons a:hover {
     color: #f60;
+    border-color: #f60;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
+
+    .footer{
+        margin-top: 200px;
+    }
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .footer-logo, .footer-links, .footer-newsletter {
+    .footer-logo,
+    .footer-links,
+    .footer-newsletter,
+    .footer-contact {
         flex: 1 1 100%;
         margin: 20px 0;
     }
@@ -530,58 +515,81 @@ label {
         max-width: 80px;
     }
 
-    .footer-logo p, .footer-logo span, .footer-links ul li a {
+    .footer-logo p,
+    .footer-logo span,
+    .footer-links ul li a {
         font-size: 12px;
     }
-
-    .footer-links h4, .footer-newsletter h4 {
-        font-size: 16px;
+    
+    .footer-contact h4 {
+        font-size: 24px;
     }
-
-    .footer-newsletter input {
-        padding: 8px;
+    
+    .footer-contact p {
         font-size: 14px;
+        margin-left: 0;
     }
-
-    .footer-newsletter button {
-        font-size: 14px;
+    
+    .social-icons {
+        justify-content: center;
     }
-
+    
     .social-icons a {
-        font-size: 18px;
-    }
-    .footer {
-        margin-top: 180px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 30px 10px;
+        padding: 30px 10px;        
     }
 
     .footer-logo img {
         max-width: 70px;
     }
 
-    .footer-logo p, .footer-logo span, .footer-links ul li a {
+    .footer-logo p,
+    .footer-logo span,
+    .footer-links ul li a {
         font-size: 11px;
     }
 
-    .footer-links h4, .footer-newsletter h4 {
-        font-size: 14px;
+    .footer-contact h4 {
+        font-size: 20px;
     }
-
-    .footer-newsletter input {
-        padding: 8px;
-        font-size: 12px;
+    
+    .footer-contact p {
+        font-size: 13px;
     }
-
-    .footer-newsletter button {
-        font-size: 12px;
-    }
-
+    
     .social-icons a {
         font-size: 16px;
     }
+}
+
+
+.footer {
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-links ul li a {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.footer-logo img {
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact h4,
+.footer-links h4 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -16,27 +16,6 @@
       servicesCard.classList.add('show');
     }
   });
-
-  document.querySelectorAll('.services-list a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        // Adjust the offset as needed (positive value pushes the element further down)
-        const offset = 10; 
-        
-        const elementRect = targetElement.getBoundingClientRect();
-        const elementTop = elementRect.top + window.pageYOffset;
-        const scrollPosition = elementTop - ((window.innerHeight - targetElement.offsetHeight) / 1) + offset;
-        
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
   
   document.addEventListener("DOMContentLoaded", function () {
     var sidebar = document.getElementById("sidebarMenu");
@@ -104,3 +83,4 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
