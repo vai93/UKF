@@ -45,11 +45,30 @@ body {
     margin: auto;
 }
 
-.logo {
-    margin-right: 50px;
-    width: 120px;
-    height: 100px;
-}
+
+.navbar-brand {
+    display: inline-block;
+    text-decoration: none; 
+  }
+  
+  .brand-text {
+    color: #ffffff;           
+    font-size: 36px;              
+    font-weight: 700;              
+    letter-spacing: 3px;           
+    text-transform: uppercase;   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    transition: transform 0.3s ease, text-shadow 0.3s ease; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  }
+  
+
+  .navbar-brand:hover .brand-text {
+    transform: scale(1.1);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+
 
 /* Navbar */
 .nav {
@@ -168,10 +187,17 @@ body {
     
     }
     
-    .logo {
-        width: 100px;
-        height: 80px;
-    }
+    .brand-text {
+        font-size: 20px;       /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px; /* Tighter spacing */
+        text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
+        transform: none;       /* Disable scaling on smaller screens */
+      }
+    
+      .navbar-brand:hover .brand-text {
+        transform: none;       /* Disable zoom effect on mobile */
+        text-shadow: none;
+      }
 }
 
 /* Quote Container */
@@ -240,10 +266,17 @@ body {
         padding: 10px 0;
     }
 
-    .logo {
-        width: 100px;
-        height: 80px;
-    }
+    .brand-text {
+        font-size: 20px;       /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px; /* Tighter spacing */
+        text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
+        transform: none;       /* Disable scaling on smaller screens */
+      }
+    
+      .navbar-brand:hover .brand-text {
+        transform: none;       /* Disable zoom effect on mobile */
+        text-shadow: none;
+      }
 
     .quote-container h1 {
         font-size: 2rem;
@@ -1006,6 +1039,7 @@ body {
     object-fit: cover;
     margin-left: 30px;
     width: 95% !important;
+    margin-top: 80px;
     height: 390px;
 }
 
@@ -1475,7 +1509,7 @@ body {
 
 .footer-contact h4 {
     color: #a4c2ff;
-    margin-top: 10px;
+    margin-top: -7px;
     font-size: 30px;
 }
 
@@ -1486,18 +1520,20 @@ body {
 
 .footer-logo {
     flex: 1;
-    margin-right: 120px;
+    margin-right: 100px;
+    align-items: center;
+    gap: 0;
 }
 
 .footer-logo img {
-    max-width: 100px;
-    margin-bottom: 15px;
+    max-width: 250px;
+    margin: 0;   
 }
 
 .footer-logo p {
     font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin: 0;  
 }
 
 .footer-logo span {
@@ -1573,7 +1609,7 @@ body {
     }
 
     .footer-logo img {
-        max-width: 80px;
+        max-width: 180px;
     }
 
     .footer-logo p,
@@ -1606,7 +1642,7 @@ body {
     }
 
     .footer-logo img {
-        max-width: 70px;
+        max-width: 140px;
     }
 
     .footer-logo p,
