@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="form-section">
-                    <form id="contactForm" enctype="multipart/form-data">
+                    <form id="contactForm">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label for="firstName">First Name</label>
@@ -229,26 +229,26 @@
     </script>
     <script>
         const form = document.getElementById("contactForm");
-      
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-      
-          const formData = new FormData();
-          formData.append("name", `${form.firstName.value} ${form.lastName.value}`);
-          formData.append("email", form.email.value);
-          formData.append("contact", form.phone.value);
-          formData.append("message", form.message.value);
-          formData.append("feedback", form.message.value); // same as message
-      
-          if (form.resume.files.length > 0) {
-            formData.append("resume", form.resume.files[0]);
-          }
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const payload = {
+    name: `${form.firstName.value} ${form.lastName.value}`,
+    email: form.email.value,
+    contact: form.phone.value,
+    message: form.message.value,
+    feedback: form.message.value, // optional - same as message
+    rating: "", // optional - you can ignore it on the backend
+  };
+
       
           try {
             const res = await fetch("https://my-mailserver.vercel.app/api/sendMail", {
-              method: "POST",
-              body: formData,
-            });
+                method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
       
             const result = await res.json();
             alert("Thank you for contacting us! We will get back to you soon.");
