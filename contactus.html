@@ -134,6 +134,7 @@
                                 <input type="email" class="form-control"
                                     id="email" placeholder="Enter your email"
                                     required>
+                                <input type="hidden"id="websiteId" name="websiteId" value="UKF"> 
                             </div>
                         </div>
                         <div class="form-group">
@@ -238,8 +239,7 @@ form.addEventListener("submit", async (e) => {
     email: form.email.value,
     contact: form.phone.value,
     message: form.message.value,
-    feedback: form.message.value, // optional - same as message
-    rating: "", // optional - you can ignore it on the backend
+    websiteId:form.websiteId.value
   };
 
       
