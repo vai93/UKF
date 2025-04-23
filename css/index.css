@@ -1533,6 +1533,7 @@ body {
 .footer-logo p {
     font-size: 14px;
     line-height: 1.6;
+    margin-top: 15px !important;
     margin: 0;  
 }
 

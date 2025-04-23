@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us - UKF Shipping Company</title>
+        <title>Contact Us Page</title>
+        <link rel="icon" type="image/png" href="img/logo3.png" sizes="128x128">
         <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -21,7 +22,7 @@
                 <nav
                     class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
                     <a href="index.html" class="navbar-brand">
-                        <span class="brand-text">UKF</span>
+                        <span class="brand-text">UKFS</span>
                     </a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -48,216 +49,201 @@
                                     href="index.html#network"><i
                                         class="fas fa-globe"></i>
                                     Network</a></li>
-                            <li class="nav-item"><button
-                                    class="btn btn-primary rounded-pill px-4">Get
-                                    A Quote</button></li>
+                            <li class="nav-item">
+                                <a href="feedback.html"
+                                    class="btn btn-primary rounded-pill px-4">Feedback</a>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="sidebar d-md-none" id="sidebarMenu">
+                <span class="close-btn">&times;</span>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>
+                            Home</a></li>
+                    <li><a href="index.html#about"><i
+                                class="fas fa-info-circle"></i> About
+                            us</a></li>
+                    <li><a href="index.html#services"><i
+                                class="fas fa-concierge-bell"></i>
+                            Services</a></li>
+                    <li><a href="contactus.html"><i class="fas fa-envelope"></i>
+                            Contact Us</a></li>
+                    <li><a href="index.html#network"><i
+                                class="fas fa-globe"></i>
+                            Network</a></li>
+                    <li>
+                        <a href="feedback.html"
+                            class="btn btn-primary rounded-pill px-4">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="container d-flex justify-content-center align-items-center vh-100">
+                <div class="contact-section">
+                    <div class="info-section">
+                        <h2>Get in Touch</h2>
+                        <p><strong>Visit us</strong><br>Entrance no:4 Firest
+                            Floor
+                            Office no 2056-A
+                            Dubai cargo village-DUBAI
+                        </p>
+                        <p><strong>Contact
+                                us</strong><br>info@ukfservices.com</p>
+                        <p><strong>Call us</strong><br>+971-4-2822626 /
+                            +971-552572837</p>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a
+                                href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <form id="contactForm"
+                            action="https://formsubmit.co/daf3503d9416939b8c613b14b9855"
+                            method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="firstName">First Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i
+                                                class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control"
+                                            id="firstName"
+                                            placeholder="Enter your first name"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i
+                                                class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control"
+                                            id="lastName"
+                                            placeholder="Enter your last name"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i
+                                            class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i
+                                            class="fas fa-phone"></i></span>
+                                    <input type="tel" class="form-control"
+                                        id="phone"
+                                        placeholder="Enter your phone number"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i
+                                            class="fas fa-comment"></i></span>
+                                    <textarea class="form-control" id="message"
+                                        rows="5"
+                                        placeholder="Tell us what we can help you with"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary mt-3 w-100">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <img src="img/logo1.jpg" alt="Logo">
+                        <p>The faster, easier way to book and manage your
+                            international shipments</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Link</h4>
+                        <ul>
+                            <li><a href="index.html#about">About us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="index.html#network">Network</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="index.html#why-choose-us">Why Choose
+                                    Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
                         </ul>
                     </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="sidebar d-md-none" id="sidebarMenu">
-            <span class="close-btn">&times;</span>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i>
-                        Home</a></li>
-                <li><a href="index.html#about"><i
-                            class="fas fa-info-circle"></i> About us</a></li>
-                <li><a href="index.html#services"><i
-                            class="fas fa-concierge-bell"></i> Services</a></li>
-                <li><a href="contactus.html"><i class="fas fa-envelope"></i>
-                        Contact Us</a></li>
-                <li><a href="#career"><i class="fas fa-briefcase"></i>
-                        Career</a></li>
-                <li>
-                    <button class="btn btn-primary rounded-pill px-4">Get A
-                        Quote</button>
-                </li>
-            </ul>
-        </div>
-
-        <div
-            class="container d-flex justify-content-center align-items-center vh-100">
-            <div class="contact-section">
-                <div class="info-section">
-                    <h2>Get in Touch</h2>
-                    <p><strong>Visit us</strong><br>Entrance no:4 Firest Floor
-                        Office no 2056-A
-                        Dubai cargo village-DUBAI
-                    </p>
-                    <p><strong>Contact us</strong><br>info@ukfservices.com</p>
-                    <p><strong>Call us</strong><br>+971-4-2822626 /
-                        +971-552572837</p>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a
-                            href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a
-                            href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
-                                class="fab fa-instagram"></i></a>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#oceanFreight">Ocean
+                                    freight</a></li>
+                            <li><a href="services.html#airFreight">Air
+                                    freight</a></li>
+                            <li><a href="services.html#roadFreight">Road
+                                    freight</a></li>
+                            <li><a href="services.html#customsClearance">Customs
+                                    clearance</a></li>
+                            <li><a
+                                    href="services.html#crossBorderRoad">Cross-border</a></li>
+                            <li><a
+                                    href="services.html#incoterms">Incoterms</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <div>
+                            <h4>Get In Touch</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Entrance
+                                no:4
+                                Firest Floor<br>
+                                Office no 2056-A <br>
+                                Dubai cargo village-DUBAI</p>
+                            <p><i class="fas fa-phone"></i> +971-4-2822626</p>
+                            <p><i class="fas fa-envelope"></i>
+                                info@ukfservices.com</p>
+                        </div>
+                        <div class="social-icons">
+                            <a
+                                href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a
+                                href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
+                                    class="fab fa-facebook-f"></i></a>
+                        </div>
                     </div>
                 </div>
+            </footer>
 
-                <div class="form-section">
-                    <form id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="firstName">First Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i
-                                            class="fas fa-user"></i></span>
-                                    <input type="text" class="form-control"
-                                        id="firstName"
-                                        placeholder="Enter your first name"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="lastName">Last Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i
-                                            class="fas fa-user"></i></span>
-                                    <input type="text" class="form-control"
-                                        id="lastName"
-                                        placeholder="Enter your last name"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i
-                                        class="fas fa-envelope"></i></span>
-                                <input type="email" class="form-control"
-                                    id="email" placeholder="Enter your email"
-                                    required>
-                                <input type="hidden"id="websiteId" name="websiteId" value="UKF"> 
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i
-                                        class="fas fa-phone"></i></span>
-                                <input type="tel" class="form-control"
-                                    id="phone"
-                                    placeholder="Enter your phone number"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <div class="input-group">
-                                <span class="input-group-text"><i
-                                        class="fas fa-comment"></i></span>
-                                <textarea class="form-control" id="message"
-                                    rows="5"
-                                    placeholder="Tell us what we can help you with"></textarea>
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="btn btn-primary mt-3 w-100">Send
-                            Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="img/logo.jpg" alt="Logo">
-                    <p>The faster, easier way to book and manage your
-                        international shipments</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Link</h4>
-                    <ul>
-                        <li><a href="index.html#about">About us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="index.html#network">Network</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Get A Quote</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#oceanFreight">Ocean
-                                freight</a></li>
-                        <li><a href="services.html#airFreight">Air
-                                freight</a></li>
-                        <li><a href="services.html#roadFreight">Road
-                                freight</a></li>
-                        <li><a href="services.html#customsClearance">Customs
-                                clearance</a></li>
-                        <li><a
-                                href="services.html#crossBorderRoad">Cross-border</a></li>
-                        <li><a href="services.html#incoterms">Incoterms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <div>
-                        <h4>Get In Touch</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Entrance no:4
-                            Firest Floor<br>
-                            Office no 2056-A <br>
-                            Dubai cargo village-DUBAI</p>
-                        <p><i class="fas fa-phone"></i> +971-4-2822626</p>
-                        <p><i class="fas fa-envelope"></i>
-                            info@ukfservices.com</p>
-                    </div>
-                    <div class="social-icons">
-                        <a
-                            href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a
-                            href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
-                                class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/contectus.js"></script>
-    </script>
-    <script>
-        const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const payload = {
-    name: `${form.firstName.value} ${form.lastName.value}`,
-    email: form.email.value,
-    contact: form.phone.value,
-    message: form.message.value,
-    websiteId:form.websiteId.value
-  };
-
-      
-          try {
-            const res = await fetch("https://my-mailserver.vercel.app/api/contactMail", {
-                method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      
-            const result = await res.json();
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="js/contectus.js"></script>
+            <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
             alert("Thank you for contacting us! We will get back to you soon.");
-            form.reset();
-          } catch (err) {
-            console.error(err);
-            alert("Something went wrong. Please try again.");
-          }
+            this.reset();
         });
-      </script>
-    </body>
-</html>
+    </script>
+        </body>
+    </html>
