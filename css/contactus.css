@@ -162,10 +162,15 @@ html {
     .nav {
       display: none;
     }
+
+    .navbar-toggler {
+        margin-right: 40px;
+    }
   
     .brand-text {
       font-size: 20px;       /* Reduce font size for smaller screens */
-      letter-spacing: 1.5px; /* Tighter spacing */
+      letter-spacing: 1.5px;
+      margin-left: 30px; /* Tighter spacing */
       text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
       transform: none;       /* Disable scaling on smaller screens */
     }
@@ -200,7 +205,7 @@ html {
     }
 
     #header {
-        height: 290px;
+        height: 240px;
     }
 }
 
