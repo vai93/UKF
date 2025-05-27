@@ -51,28 +51,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function sendMail(e) {
-    e.preventDefault();  // Prevent the form from submitting normally
-    console.log("called");
+const form = document.getElementById("contactForm");
 
-    const email = "";
-    const templateParams = {
-        to_email: email,
-        subject: "New Contact Request from...",
-        message: `Name: ${document.getElementById('firstName').value} ${document.getElementById('lastName').value}\nEmail: ${document.getElementById('email').value}\nPhone: ${document.getElementById('phone').value}\nMessage: ${document.getElementById('message').value}`,
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const payload = {
+        name: `${form.firstName.value} ${form.lastName.value}`,
+        email: form.email.value,
+        contact: form.phone.value,
+        message: form.message.value,
+        websiteId:"UKF"
     };
 
-    console.log("Form Data Collected:", templateParams);
-    console.log("Sending email...");
 
-    // Send email using EmailJS
-    emailjs.send("service_z3kkqtd", "template_715wyrd", templateParams)
-        .then((response) => {
-            console.log(`Email sent successfully to ${email}`, response);
-        })
-        .catch((error) => {
-            console.error(`Error sending email to ${email}`, error);
+    try {
+        const res = await fetch("https://my-mailserver.vercel.app/api/contactMail", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
         });
-}
 
-document.querySelector('form').addEventListener('submit', sendMail);
+        const result = await res.json();
+        alert("Thank you for contacting us! We will get back to you soon.");
+        form.reset();
+    } catch (err) {
+        console.error(err);
+        alert("Something went wrong. Please try again.");
+    }
+});
