@@ -73,12 +73,10 @@ form.addEventListener("submit", async (e) => {
         });
 
         const result = await res.json();
-        const msgBox = document.getElementById('feedback-msg');
          alert("Thank you for contacting us! We will get back to you soon.");
         form.reset();
     } catch (err) {
         console.error(err);
-const msgBox = document.getElementById('feedback-msg');
 alert("Something went wrong. Please try again.");
     }
 });
