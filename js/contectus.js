@@ -73,10 +73,16 @@ form.addEventListener("submit", async (e) => {
         });
 
         const result = await res.json();
-        alert("Thank you for contacting us! We will get back to you soon.");
+        const msgBox = document.getElementById('feedback-msg');
+msgBox.textContent = "Thank you for contacting us! We will get back to you soon.";
+msgBox.classList.remove('hidden');
+msgBox.classList.add('error-msg'); 
         form.reset();
     } catch (err) {
         console.error(err);
-        alert("Something went wrong. Please try again.");
+const msgBox = document.getElementById('feedback-msg');
+msgBox.textContent = "Something went wrong. Please try again.";
+msgBox.classList.remove('hidden');
+msgBox.classList.add('error-msg'); 
     }
 });
