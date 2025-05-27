@@ -74,15 +74,11 @@ form.addEventListener("submit", async (e) => {
 
         const result = await res.json();
         const msgBox = document.getElementById('feedback-msg');
-msgBox.textContent = "Thank you for contacting us! We will get back to you soon.";
-msgBox.classList.remove('hidden');
-msgBox.classList.add('error-msg'); 
+         alert("Thank you for contacting us! We will get back to you soon.");
         form.reset();
     } catch (err) {
         console.error(err);
 const msgBox = document.getElementById('feedback-msg');
-msgBox.textContent = "Something went wrong. Please try again.";
-msgBox.classList.remove('hidden');
-msgBox.classList.add('error-msg'); 
+alert("Something went wrong. Please try again.");
     }
 });
