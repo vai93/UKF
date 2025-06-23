@@ -853,40 +853,313 @@ textarea.form-control {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#scrollToTop {
-    display: none;
-    /* Initially hidden */
+
+/*------------------------------------------------------------- Chatbot--------------------------------------------------*/
+
+/* ukf_chatbot.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Chat toggle button */
+#ukf-chat-toggle-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    font-size: 24px;
-    color: white;
+    bottom: 24px;
+    right: 24px;
+    background: #3498db;
+    color: #fff;
     border: none;
-    outline: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     cursor: pointer;
+    font-size: 28px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s;
+    animation: ukf-pulse 2.5s infinite ease-in-out;
+}
+
+#ukf-chat-toggle-btn:hover {
+    background: #2980b9;
+}
+
+#ukf-chat-toggle-btn[aria-pressed="true"] {
+    background: #21618c;
+    animation: none;
+}
+
+@keyframes ukf-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Chat container */
+#ukf-chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 320px;
+    height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Header with close button */
+#ukf-chatbot-header {
+    position: relative;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ukf-chat-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+#ukf-chat-close-btn:hover {
+    color: #e74c3c;
+}
+
+#ukf-chat-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 12px 0;
+}
+
+.ukf-message {
+    margin-bottom: 10px;
+}
+
+.ukf-bot {
+    background: #000e79;
+    color: white;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px !important;
-    background-image: linear-gradient(45deg, rgb(41, 106, 210), rgb(55, 46, 235));
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    width: 45px;
-    height: 45px;
-    padding: 0;
-    line-height: 45px;
-    text-align: center;
+    border-radius: 8px;
+    max-width: 80%;
 }
 
-#scrollToTop:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+.ukf-user {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
 }
 
+/* Buttons inside chat */
+.ukf-btn {
+    margin: 4px 0;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.ukf-btn:hover {
+    background: #2980b9;
+}
+
+.ukf-back-btn {
+    background: #888 !important;
+}
+
+.ukf-back-btn:hover {
+    background: #666 !important;
+}
+
+/* Popup styling */
+#ukf-chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1000;
+    pointer-events: auto;
+    animation: ukf-slideInOut 6s ease-in-out forwards;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+.ukf-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    animation: ukf-wave 2s infinite;
+    transform-origin: bottom center;
+}
+
+.ukf-popup-text {
+    flex: 1;
+}
+
+@keyframes ukf-slideInOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes ukf-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(14deg);
+    }
+
+    30% {
+        transform: rotate(-8deg);
+    }
+
+    45% {
+        transform: rotate(14deg);
+    }
+
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Responsive adjustments */
 @media (max-width: 480px) {
-    #scrollToTop {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 20px;
+    #ukf-chat-toggle-btn {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    #ukf-chatbot-container {
+        bottom: 70px;
+        right: 8px;
+        width: calc(100% - 16px);
+        max-width: 360px;
+        height: 60vh;
+        border-radius: 8px;
+    }
+
+    #ukf-chatbot-header {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    #ukf-chat-output {
+        padding: 8px 10px 0;
+    }
+
+    .ukf-message {
+        margin-bottom: 8px;
+    }
+
+    .ukf-bot,
+    .ukf-user {
+        max-width: 100%;
+    }
+
+    .ukf-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 70px;
+        right: 8px;
+        max-width: calc(100% - 16px);
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .ukf-avatar {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
+
+/* Slightly larger breakpoint */
+@media (max-width: 768px) {
+    #ukf-chatbot-container {
+        bottom: 80px;
+        right: 16px;
+        width: 300px;
+        height: 55vh;
+    }
+
+    #ukf-chat-toggle-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 80px;
+        right: 16px;
+        width: 260px;
     }
 }

@@ -8,7 +8,8 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-x: hidden;
+    /* Disable horizontal scrolling */
     width: 100%;
     height: 100%;
 }
@@ -48,26 +49,26 @@ body {
 
 .navbar-brand {
     display: inline-block;
-    text-decoration: none; 
-  }
-  
-  .brand-text {
-    color: #ffffff;           
-    font-size: 36px;              
-    font-weight: 700;              
-    letter-spacing: 3px;           
-    text-transform: uppercase;   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    transition: transform 0.3s ease, text-shadow 0.3s ease; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-  }
-  
+    text-decoration: none;
+}
 
-  .navbar-brand:hover .brand-text {
+.brand-text {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar-brand:hover .brand-text {
     transform: scale(1.1);
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
+}
+
 
 
 /* Navbar */
@@ -130,8 +131,8 @@ body {
     background-color: #000e79;
 }
 
- /* Sidebar styles for small screens */
- @media (max-width: 768px) {
+/* Sidebar styles for small screens */
+@media (max-width: 768px) {
     .sidebar {
         position: fixed;
         left: -250px;
@@ -184,20 +185,25 @@ body {
 
     .nav {
         display: none;
-    
+
     }
-    
+
     .brand-text {
-        font-size: 20px;       /* Reduce font size for smaller screens */
-        letter-spacing: 1.5px; /* Tighter spacing */
-        text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
-        transform: none;       /* Disable scaling on smaller screens */
-      }
-    
-      .navbar-brand:hover .brand-text {
-        transform: none;       /* Disable zoom effect on mobile */
+        font-size: 20px;
+        /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px;
+        /* Tighter spacing */
         text-shadow: none;
-      }
+        /* Remove heavy shadow on small screens for clarity */
+        transform: none;
+        /* Disable scaling on smaller screens */
+    }
+
+    .navbar-brand:hover .brand-text {
+        transform: none;
+        /* Disable zoom effect on mobile */
+        text-shadow: none;
+    }
 }
 
 /* Quote Container */
@@ -217,8 +223,8 @@ body {
     pointer-events: none;
 }
 
-.quote-container h1, 
-.quote-container .subheading, 
+.quote-container h1,
+.quote-container .subheading,
 .quote-container button {
     pointer-events: auto;
 }
@@ -267,16 +273,21 @@ body {
     }
 
     .brand-text {
-        font-size: 20px;       /* Reduce font size for smaller screens */
-        letter-spacing: 1.5px; /* Tighter spacing */
-        text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
-        transform: none;       /* Disable scaling on smaller screens */
-      }
-    
-      .navbar-brand:hover .brand-text {
-        transform: none;       /* Disable zoom effect on mobile */
+        font-size: 20px;
+        /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px;
+        /* Tighter spacing */
         text-shadow: none;
-      }
+        /* Remove heavy shadow on small screens for clarity */
+        transform: none;
+        /* Disable scaling on smaller screens */
+    }
+
+    .navbar-brand:hover .brand-text {
+        transform: none;
+        /* Disable zoom effect on mobile */
+        text-shadow: none;
+    }
 
     .quote-container h1 {
         font-size: 2rem;
@@ -483,7 +494,7 @@ body {
 .about-text h1 {
     font-size: 3.5rem;
     font-weight: bold;
-    color:#f1efef;
+    color: #f1efef;
     margin-bottom: 10px !important;
     position: relative;
 }
@@ -521,7 +532,7 @@ body {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    color:#35393d;
+    color: #35393d;
 }
 
 .animated-text.active {
@@ -546,7 +557,7 @@ body {
     overflow: hidden;
     /* Original transition for max-height */
     transition: max-height 0.5s ease;
-    
+
     /* For bottom-to-top animation of the entire container */
     position: relative;
     opacity: 0;
@@ -556,8 +567,9 @@ body {
 }
 
 .more-content.active {
-    max-height: 2000px; /* Sufficiently high to display all extra content */
-    
+    max-height: 2000px;
+    /* Sufficiently high to display all extra content */
+
     /* Bottom-to-top fade-in for container */
     opacity: 1;
     transform: translateY(0);
@@ -577,7 +589,7 @@ body {
 /* Matching text style for extra content to normal about-text p */
 .more-content p {
     font-size: 1.2rem;
-    color:#35393d;
+    color: #35393d;
     margin-bottom: 13px !important;
     /* Adjusted line-height to avoid overlapping */
     line-height: 1.6;
@@ -596,10 +608,12 @@ body {
     display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .toggle-button:hover {
     background-color: #ff5700;
     color: #ffffff;
 }
+
 /* Override animated-text effect on toggle-button so it remains static */
 .toggle-button.animated-text {
     opacity: 1 !important;
@@ -628,7 +642,7 @@ body {
         padding: 20px 0;
     }
 
-    .toggle-button{
+    .toggle-button {
         margin-top: 2 0px;
     }
 }
@@ -647,7 +661,7 @@ body {
         height: 250px;
     }
 
-    .toggle-button{
+    .toggle-button {
         margin-top: 10px;
     }
 }
@@ -657,7 +671,7 @@ body {
 /* ===========================
    Services Section Styles
    =========================== */
-   .services-section {
+.services-section {
     padding: 40px 20px;
     background: linear-gradient(to bottom, #ffffff, #f0f4f9);
 }
@@ -683,7 +697,8 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-    cursor: pointer; /* Makes the card clickable */
+    cursor: pointer;
+    /* Makes the card clickable */
 }
 
 .service-card:hover {
@@ -734,12 +749,14 @@ body {
 .all-services-link {
     display: inline-flex;
     align-items: center;
-    gap: 12px; /* Space between text and arrow */
+    gap: 12px;
+    /* Space between text and arrow */
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    color: #000e79; /* Dark blue */
+    color: #000e79;
+    /* Dark blue */
     transition: color 0.3s ease;
 }
 
@@ -752,8 +769,10 @@ body {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-color: #000e79; /* Dark blue background */
-    color: #ffffff; /* White arrow */
+    background-color: #000e79;
+    /* Dark blue background */
+    color: #ffffff;
+    /* White arrow */
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 50%;
@@ -769,7 +788,8 @@ body {
 }
 
 .all-services-link:hover .all-services-icon {
-    transform: translateX(50px); /* Moves the arrow slightly to the right */
+    transform: translateX(50px);
+    /* Moves the arrow slightly to the right */
     background-color: #ff5700;
 }
 
@@ -778,6 +798,7 @@ body {
     .services-section h2 {
         font-size: 2.4rem;
     }
+
     .service-card {
         padding: 25px 15px;
         height: 280px;
@@ -788,12 +809,12 @@ body {
     .services-section {
         padding: 30px 15px;
     }
-    
+
     .services-section h2 {
         font-size: 2.2rem;
         margin-bottom: 30px;
     }
-    
+
     .service-card {
         padding: 20px;
         height: 260px;
@@ -802,17 +823,17 @@ body {
     .service-card h3 {
         font-size: 1.3rem;
     }
-    
+
     .service-icon {
         font-size: 1.5rem;
         width: 60px;
         height: 60px;
     }
-    
+
     .all-services-link {
         font-size: 1.3rem;
     }
-    
+
     .all-services-icon {
         width: 45px;
         height: 45px;
@@ -824,20 +845,20 @@ body {
     .services-section {
         padding: 20px 10px;
     }
-    
+
     .services-section h2 {
         font-size: 2rem;
     }
-    
+
     .service-card {
         padding: 15px;
         height: 240px;
     }
-    
+
     .service-card p {
         font-size: 0.9rem;
     }
-    
+
     .all-services-link {
         font-size: 1.2rem;
     }
@@ -847,7 +868,7 @@ body {
    Modal Styles
    =========================== */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -855,7 +876,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
 }
@@ -872,8 +893,15 @@ body {
 }
 
 @keyframes modalAppear {
-    from { opacity: 0; transform: translateY(50px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close {
@@ -925,29 +953,29 @@ body {
         width: 95%;
         min-height: 350px;
     }
-    
+
     .close {
         top: 5px;
         right: 15px;
         font-size: 1.3rem;
     }
-    
+
     .modal-icon {
         width: 80px;
         height: 80px;
         font-size: 2rem;
         margin-bottom: 15px;
     }
-    
+
     .modal-title {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
-    
+
     .modal-description {
         font-size: 0.9rem;
     }
-    
+
     .modal-text-large {
         font-size: 1rem;
     }
@@ -959,28 +987,28 @@ body {
         width: 95%;
         min-height: 300px;
     }
-    
+
     .close {
         top: 5px;
         right: 10px;
         font-size: 1.2rem;
     }
-    
+
     .modal-icon {
         width: 70px;
         height: 70px;
         font-size: 1.8rem;
         margin-bottom: 10px;
     }
-    
+
     .modal-title {
         font-size: 1.3rem;
     }
-    
+
     .modal-description {
         font-size: 0.85rem;
     }
-    
+
     .modal-text-large {
         font-size: 0.95rem;
     }
@@ -995,7 +1023,7 @@ body {
 
 .about-text h1 {
     font-size: 3.5rem;
-    margin-top:30px;
+    margin-top: 30px;
     font-weight: bold;
     color: #f1efef;
     margin-bottom: 0px;
@@ -1209,49 +1237,49 @@ body {
     padding: 60px 0;
     background: linear-gradient(to bottom, #85ABD9, #EAF2F8);
     position: relative;
-  }
-  
-  .network-section h2 {
+}
+
+.network-section h2 {
     font-size: 3rem;
     color: #f1efef;
     font-weight: bold;
     margin-bottom: 20px !important;
-  }
-  
-  .network-section p {
+}
+
+.network-section p {
     font-size: 1.3rem;
     color: #35393d;
     width: 850px;
     margin: 0 auto 13px !important;
     line-height: 1.5;
     display: block;
-  }
-  
-  .network-info {
+}
+
+.network-info {
     text-align: left;
-  }
-  
-  .network-info p {
+}
+
+.network-info p {
     width: 100%;
     margin: 0 0 20px;
     margin-bottom: 35px !important;
-  }
-  
-  .network-bullet-points {
+}
+
+.network-bullet-points {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .network-bullet-points li {
+}
+
+.network-bullet-points li {
     font-size: 1.1rem;
     line-height: 1.5;
-    padding-left: 30px; 
+    padding-left: 30px;
     position: relative;
     margin-bottom: 10px;
-  }
-  
-  .network-bullet-points li:before {
+}
+
+.network-bullet-points li:before {
     content: "";
     display: inline-block;
     width: 14px;
@@ -1264,36 +1292,36 @@ body {
     position: absolute;
     left: 0;
     top: 4px;
-  }
-  
-  .network-diagram {
+}
+
+.network-diagram {
     position: relative;
     width: 500px;
     height: 500px;
     margin: 0 auto;
-  }
-  
-  .network-lines {
+}
+
+.network-lines {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-  }
-  
-  .network-line {
+}
+
+.network-line {
     stroke: #aaa;
     stroke-width: 2;
-    stroke-dasharray: 5,5;
+    stroke-dasharray: 5, 5;
     animation: dash 2s linear infinite;
-  }
-  
-  @keyframes dash {
+}
+
+@keyframes dash {
     to {
-      stroke-dashoffset: 20;
+        stroke-dashoffset: 20;
     }
-  }
-  
-  .network-center {
+}
+
+.network-center {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -1309,35 +1337,35 @@ body {
     font-size: 2rem;
     z-index: 2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .network-node {
+}
+
+.network-node {
     position: absolute;
     width: 100px;
     height: 100px;
     z-index: 3;
     transition: transform 0.3s ease;
-  }
-  
-  .network-node:hover {
+}
+
+.network-node:hover {
     transform: scale(1.1);
-  }
-  
-  .node-img-wrapper {
+}
+
+.node-img-wrapper {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #007bff; 
-  }
-  
-  .node-icon {
+    border: 4px solid #007bff;
+}
+
+.node-icon {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .node-label {
+}
+
+.node-label {
     position: absolute;
     bottom: -20px;
     left: 50%;
@@ -1349,144 +1377,153 @@ body {
     font-size: 0.8rem;
     border: 2px solid #fff;
     text-align: center;
-  }
-  
-  .region-title {
+}
+
+.region-title {
     font-weight: bold;
     line-height: 1.2;
-  }
-  
-  .region-countries {
+}
+
+.region-countries {
     font-size: 0.7rem;
     color: #ffcc00;
     line-height: 1.2;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
     .network-diagram {
-      width: 300px;
-      height: 300px;
+        width: 300px;
+        height: 300px;
     }
+
     .network-center {
-      width: 60px;
-      height: 60px;
-      font-size: 1.5rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
     }
+
     .network-node {
-      width: 70px;
-      height: 70px;
+        width: 70px;
+        height: 70px;
     }
+
     .node-label {
-      font-size: 0.6rem;
-      bottom: -15px;
+        font-size: 0.6rem;
+        bottom: -15px;
     }
-  }
-  
-  /* Additional Responsive Overrides to Center & Scale the Diagram */
-  @media (max-width: 767px) {
+}
+
+/* Additional Responsive Overrides to Center & Scale the Diagram */
+@media (max-width: 767px) {
     .network-diagram {
-      /* Scale the entire diagram to 60% of its original size and center it */
-      transform: scale(0.6) !important;
-      transform-origin: top center !important;
-      margin: 0 auto !important;
-      margin-right: 160px !important;
+        /* Scale the entire diagram to 60% of its original size and center it */
+        transform: scale(0.6) !important;
+        transform-origin: top center !important;
+        margin: 0 auto !important;
+        margin-right: 160px !important;
     }
+
     .network-center {
-      left: 72% !important;
-      top: 72% !important;
+        left: 72% !important;
+        top: 72% !important;
     }
-  }
-  
-  /* Additional responsive typography adjustments */
-  @media (max-width: 767px) {
+}
+
+/* Additional responsive typography adjustments */
+@media (max-width: 767px) {
     .network-section p {
-      width: 100% !important;
-      font-size: 1.1rem;
+        width: 100% !important;
+        font-size: 1.1rem;
     }
+
     .network-section h2 {
-      font-size: 2rem !important;
+        font-size: 2rem !important;
     }
+
     .network-bullet-points li {
         font-size: 1.1rem;
 
-      }
-      
-  }
+    }
 
-  /*--------------------------------------------------- Why Choose Us Section ----------------------------------------------------------*/
-  .why-choose-us-section {
+}
+
+/*--------------------------------------------------- Why Choose Us Section ----------------------------------------------------------*/
+.why-choose-us-section {
     padding: 80px 0;
     background: #f6f6f6;
-  }
-  
-  .why-choose-us-section h2 {
+}
+
+.why-choose-us-section h2 {
     font-size: 2.8rem;
     color: #333;
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
-  }
-  
-  .why-choose-us-section p {
+}
+
+.why-choose-us-section p {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
-  }
-  
-  .why-benefits {
+}
+
+.why-benefits {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .why-benefits li {
+}
+
+.why-benefits li {
     font-size: 1.1rem;
     color: #333;
     margin-bottom: 10px;
     position: relative;
     padding-left: 35px;
-  }
-  
-  .why-benefits li i {
+}
+
+.why-benefits li i {
     position: absolute;
     left: 0;
     top: 0;
     color: #007bff;
     font-size: 1.5rem;
     line-height: 1;
-  }
-  
-  /* Image styling */
-  .why-image img {
+}
+
+/* Image styling */
+.why-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 767px) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
     .why-choose-us-section {
-      padding: 40px 20px;
+        padding: 40px 20px;
     }
+
     .why-choose-us-section h2 {
         margin-top: 20px;
-      font-size: 2rem;
-      text-align: center;
+        font-size: 2rem;
+        text-align: center;
     }
-    .why-choose-us-section p{
+
+    .why-choose-us-section p {
         text-align: center;
         font-size: 1.1rem;
 
 
     }
+
     .why-benefits {
         font-size: 1.1rem;
 
     }
-  }
-  
+}
+
 
 /*------------------------------------------------------------- Footer--------------------------------------------------*/
 
@@ -1527,14 +1564,14 @@ body {
 
 .footer-logo img {
     max-width: 250px;
-    margin: 0;   
+    margin: 0;
 }
 
 .footer-logo p {
     font-size: 14px;
     line-height: 1.6;
     margin-top: 15px !important;
-    margin: 0;  
+    margin: 0;
 }
 
 .footer-logo span {
@@ -1618,20 +1655,20 @@ body {
     .footer-links ul li a {
         font-size: 12px;
     }
-    
+
     .footer-contact h4 {
         font-size: 24px;
     }
-    
+
     .footer-contact p {
         font-size: 14px;
         margin-left: 0;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .social-icons a {
         font-size: 16px;
     }
@@ -1655,11 +1692,11 @@ body {
     .footer-contact h4 {
         font-size: 20px;
     }
-    
+
     .footer-contact p {
         font-size: 13px;
     }
-    
+
     .social-icons a {
         font-size: 16px;
     }
@@ -1698,9 +1735,10 @@ body {
 }
 
 #scrollToTop {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     z-index: 9999;
     font-size: 24px;
@@ -1709,7 +1747,7 @@ body {
     outline: none;
     cursor: pointer;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px !important;
     background-image: linear-gradient(45deg, rgb(41, 106, 210), rgb(55, 46, 235));
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -1718,19 +1756,331 @@ body {
     padding: 0;
     line-height: 45px;
     text-align: center;
-  }
-  
-  #scrollToTop:hover {
+}
+
+#scrollToTop:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
- 
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     #scrollToTop {
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-      font-size: 20px;
+        bottom: 80px;
+        right: 16px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 20px;
     }
-  }
-  
+}
+
+
+/*------------------------------------------------------------- Chatbot--------------------------------------------------*/
+
+/* ukf_chatbot.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Chat toggle button */
+#ukf-chat-toggle-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s;
+    animation: ukf-pulse 2.5s infinite ease-in-out;
+}
+
+#ukf-chat-toggle-btn:hover {
+    background: #2980b9;
+}
+
+#ukf-chat-toggle-btn[aria-pressed="true"] {
+    background: #21618c;
+    animation: none;
+}
+
+@keyframes ukf-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Chat container */
+#ukf-chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 320px;
+    height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Header with close button */
+#ukf-chatbot-header {
+    position: relative;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ukf-chat-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+#ukf-chat-close-btn:hover {
+    color: #e74c3c;
+}
+
+#ukf-chat-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 12px 0;
+}
+
+.ukf-message {
+    margin-bottom: 10px;
+}
+
+.ukf-bot {
+    background: #000e79;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.ukf-user {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+/* Buttons inside chat */
+.ukf-btn {
+    margin: 4px 0;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.ukf-btn:hover {
+    background: #2980b9;
+}
+
+.ukf-back-btn {
+    background: #888 !important;
+}
+
+.ukf-back-btn:hover {
+    background: #666 !important;
+}
+
+/* Popup styling */
+#ukf-chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1000;
+    pointer-events: auto;
+    animation: ukf-slideInOut 6s ease-in-out forwards;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+.ukf-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    animation: ukf-wave 2s infinite;
+    transform-origin: bottom center;
+}
+
+.ukf-popup-text {
+    flex: 1;
+}
+
+@keyframes ukf-slideInOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes ukf-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(14deg);
+    }
+
+    30% {
+        transform: rotate(-8deg);
+    }
+
+    45% {
+        transform: rotate(14deg);
+    }
+
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #ukf-chat-toggle-btn {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    #ukf-chatbot-container {
+        bottom: 70px;
+        right: 8px;
+        width: calc(100% - 16px);
+        max-width: 360px;
+        height: 60vh;
+        border-radius: 8px;
+    }
+
+    #ukf-chatbot-header {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    #ukf-chat-output {
+        padding: 8px 10px 0;
+    }
+
+    .ukf-message {
+        margin-bottom: 8px;
+    }
+
+    .ukf-bot,
+    .ukf-user {
+        max-width: 100%;
+    }
+
+    .ukf-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 70px;
+        right: 8px;
+        max-width: calc(100% - 16px);
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .ukf-avatar {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
+
+/* Slightly larger breakpoint */
+@media (max-width: 768px) {
+    #ukf-chatbot-container {
+        bottom: 80px;
+        right: 16px;
+        width: 300px;
+        height: 55vh;
+    }
+
+    #ukf-chat-toggle-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 80px;
+        right: 16px;
+        width: 260px;
+    }
+}

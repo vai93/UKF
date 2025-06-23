@@ -16,7 +16,7 @@ html {
     height: 150px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #85ABD9,);
+    background: linear-gradient(to bottom, #85ABD9, );
 }
 
 .container {
@@ -28,20 +28,20 @@ html {
 
 .navbar-brand {
     display: inline-block;
-    text-decoration: none; 
-  }
-  
-  /* Base styling for the UKF text */
-  .brand-text {
-    color: #ffffff;           
-    font-size: 36px;              
-    font-weight: 700;              
-    letter-spacing: 3px;           
-    text-transform: uppercase;   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    transition: transform 0.3s ease, text-shadow 0.3s ease; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-  }
+    text-decoration: none;
+}
+
+/* Base styling for the UKF text */
+.brand-text {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 /* Navbar */
 
@@ -78,7 +78,8 @@ html {
 }
 
 .nav-link:hover {
-    color: #000e79 !important; /* Change color on hover */
+    color: #000e79 !important;
+    /* Change color on hover */
 }
 
 .nav-link:hover::after {
@@ -107,8 +108,8 @@ html {
     background-color: #000e79;
 }
 
- /* Sidebar styles for small screens */
- @media (max-width: 768px) {
+/* Sidebar styles for small screens */
+@media (max-width: 768px) {
     .sidebar {
         position: fixed;
         left: -250px;
@@ -160,26 +161,31 @@ html {
 /* Media query for responsive view */
 @media (max-width: 768px) {
     .nav {
-      display: none;
+        display: none;
     }
 
     .navbar-toggler {
         margin-right: 40px;
     }
-  
+
     .brand-text {
-      font-size: 20px;       /* Reduce font size for smaller screens */
-      letter-spacing: 1.5px;
-      margin-left: 30px; /* Tighter spacing */
-      text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
-      transform: none;       /* Disable scaling on smaller screens */
+        font-size: 20px;
+        /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px;
+        margin-left: 30px;
+        /* Tighter spacing */
+        text-shadow: none;
+        /* Remove heavy shadow on small screens for clarity */
+        transform: none;
+        /* Disable scaling on smaller screens */
     }
-  
+
     .navbar-brand:hover .brand-text {
-      transform: none;       /* Disable zoom effect on mobile */
-      text-shadow: none;
+        transform: none;
+        /* Disable zoom effect on mobile */
+        text-shadow: none;
     }
-  }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -194,11 +200,15 @@ html {
     }
 
     .brand-text {
-        font-size: 20px;       /* Reduce font size for smaller screens */
-        letter-spacing: 1.5px; /* Tighter spacing */
-        text-shadow: none;     /* Remove heavy shadow on small screens for clarity */
-        transform: none;       /* Disable scaling on smaller screens */
-      }
+        font-size: 20px;
+        /* Reduce font size for smaller screens */
+        letter-spacing: 1.5px;
+        /* Tighter spacing */
+        text-shadow: none;
+        /* Remove heavy shadow on small screens for clarity */
+        transform: none;
+        /* Disable scaling on smaller screens */
+    }
 
     .quote-container h1 {
         font-size: 2rem;
@@ -368,7 +378,8 @@ label {
         flex-direction: column;
     }
 
-    .info-section, .form-section {
+    .info-section,
+    .form-section {
         padding: 30px;
     }
 
@@ -386,10 +397,12 @@ label {
 }
 
 @media (max-width: 480px) {
-    .contact-section{
+    .contact-section {
         margin-top: 60px;
     }
-    .info-section, .form-section {
+
+    .info-section,
+    .form-section {
         padding: 20px;
     }
 
@@ -454,14 +467,14 @@ label {
 
 .footer-logo img {
     max-width: 250px;
-    margin: 0;   
+    margin: 0;
 }
 
 .footer-logo p {
     font-size: 14px;
     line-height: 1.6;
     margin-top: 15px !important;
-    margin: 0;  
+    margin: 0;
 }
 
 .footer-logo span {
@@ -519,12 +532,14 @@ label {
     color: #f60;
     border-color: #f60;
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
 
-    .footer{
+    .footer {
         margin-top: 200px;
     }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -548,20 +563,20 @@ label {
     .footer-links ul li a {
         font-size: 12px;
     }
-    
+
     .footer-contact h4 {
         font-size: 24px;
     }
-    
+
     .footer-contact p {
         font-size: 14px;
         margin-left: 0;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .social-icons a {
         font-size: 16px;
     }
@@ -569,7 +584,7 @@ label {
 
 @media (max-width: 480px) {
     .footer {
-        padding: 30px 10px;        
+        padding: 30px 10px;
     }
 
     .footer-logo img {
@@ -585,11 +600,11 @@ label {
     .footer-contact h4 {
         font-size: 20px;
     }
-    
+
     .footer-contact p {
         font-size: 13px;
     }
-    
+
     .social-icons a {
         font-size: 16px;
     }
@@ -620,4 +635,315 @@ label {
 .footer-contact h4,
 .footer-links h4 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/*------------------------------------------------------------- Chatbot--------------------------------------------------*/
+
+/* ukf_chatbot.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Chat toggle button */
+#ukf-chat-toggle-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s;
+    animation: ukf-pulse 2.5s infinite ease-in-out;
+}
+
+#ukf-chat-toggle-btn:hover {
+    background: #2980b9;
+}
+
+#ukf-chat-toggle-btn[aria-pressed="true"] {
+    background: #21618c;
+    animation: none;
+}
+
+@keyframes ukf-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Chat container */
+#ukf-chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 320px;
+    height: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Header with close button */
+#ukf-chatbot-header {
+    position: relative;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ukf-chat-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+#ukf-chat-close-btn:hover {
+    color: #e74c3c;
+}
+
+#ukf-chat-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 12px 0;
+}
+
+.ukf-message {
+    margin-bottom: 10px;
+}
+
+.ukf-bot {
+    background: #000e79;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.ukf-user {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+/* Buttons inside chat */
+.ukf-btn {
+    margin: 4px 0;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.ukf-btn:hover {
+    background: #2980b9;
+}
+
+.ukf-back-btn {
+    background: #888 !important;
+}
+
+.ukf-back-btn:hover {
+    background: #666 !important;
+}
+
+/* Popup styling */
+#ukf-chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1000;
+    pointer-events: auto;
+    animation: ukf-slideInOut 6s ease-in-out forwards;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+.ukf-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    animation: ukf-wave 2s infinite;
+    transform-origin: bottom center;
+}
+
+.ukf-popup-text {
+    flex: 1;
+}
+
+@keyframes ukf-slideInOut {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes ukf-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(14deg);
+    }
+
+    30% {
+        transform: rotate(-8deg);
+    }
+
+    45% {
+        transform: rotate(14deg);
+    }
+
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #ukf-chat-toggle-btn {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    #ukf-chatbot-container {
+        bottom: 70px;
+        right: 8px;
+        width: calc(100% - 16px);
+        max-width: 360px;
+        height: 60vh;
+        border-radius: 8px;
+    }
+
+    #ukf-chatbot-header {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    #ukf-chat-output {
+        padding: 8px 10px 0;
+    }
+
+    .ukf-message {
+        margin-bottom: 8px;
+    }
+
+    .ukf-bot,
+    .ukf-user {
+        max-width: 100%;
+    }
+
+    .ukf-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 70px;
+        right: 8px;
+        max-width: calc(100% - 16px);
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .ukf-avatar {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
+
+/* Slightly larger breakpoint */
+@media (max-width: 768px) {
+    #ukf-chatbot-container {
+        bottom: 80px;
+        right: 16px;
+        width: 300px;
+        height: 55vh;
+    }
+
+    #ukf-chat-toggle-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #ukf-chat-popup {
+        bottom: 80px;
+        right: 16px;
+        width: 260px;
+    }
 }

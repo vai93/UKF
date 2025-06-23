@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Services Page</title>
-        <link rel="icon" type="image/png" href="img/logo3.png" sizes="128x128">
+        <link rel="icon" type="image/png" href="img/logo.png" sizes="128x128">
         <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -19,6 +19,9 @@
         <!-- Font Awesome for icons -->
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <!-- XLSX library for reading the Excel file -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     </head>
 
     <body>
@@ -687,6 +690,33 @@
             duration: 1000
         });
     </script>
+
+            <!------------------------------------------------ Chatbot Section ------------------------------------------------>
+            <button id="ukf-chat-toggle-btn" aria-label="Toggle Assistant"
+                aria-pressed="false">🤖</button>
+
+            <div id="ukf-chatbot-container">
+                <div id="ukf-chatbot-header">
+                    UKF Assistant
+                    <button id="ukf-chat-close-btn"
+                        aria-label="Close Chat">✖</button>
+                </div>
+                <div id="ukf-chat-output"></div>
+            </div>
+
+            <div id="ukf-chat-popup">
+                <div class="ukf-avatar">
+                    <svg width="40" height="40" viewBox="0 0 64 64"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="18" r="12" fill="#f1c40f" />
+                        <path d="M16 58c0-11 9-20 16-20s16 9 16 20"
+                            fill="#e67e22" />
+                    </svg>
+                </div>
+                <div class="ukf-popup-text">
+                    Hello! I'm your assistant. Click the robot icon to start.
+                </div>
+            </div>
 
             <footer class="footer">
                 <div class="footer-container">
