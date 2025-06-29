@@ -1,258 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feedback Page</title>
-        <link rel="icon" type="image/png" href="img/logo.png" sizes="128x128">
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <!-- Font Awesome -->
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/feedback.css">
-        <!-- AOS CSS -->
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-        <!-- Font Awesome for icons -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-        <!-- XLSX library for reading the Excel file -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="icon" type="image/png" href="img/logo.png" sizes="128x128">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/feedback.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- XLSX library for reading the Excel file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav
-                    class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
-                    <a href="index.html" class="navbar-brand">
-                        <span class="brand-text">UKFS</span>
-                    </a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav ms-auto">
-                            <li class="nav-item"><a class="nav-link"
-                                    href="index.html"><i
-                                        class="fas fa-home"></i> Home</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="index.html#about"><i
-                                        class="fas fa-info-circle"></i> About
-                                    us</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="index.html#services"><i
-                                        class="fas fa-concierge-bell"></i>
-                                    Services</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="contactus.html"><i
-                                        class="fas fa-envelope"></i> Contact
-                                    Us</a></li>
-                            <li class="nav-item"><a class="nav-link"
-                                    href="index.html#network"><i
-                                        class="fas fa-globe"></i>
-                                    Network</a></li>
-                            <li>
-                                <a href="feedback.html"
-                                    class="btn btn-primary rounded-pill px-4">Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-transparent d-flex justify-content-between align-items-center">
+                <a href="index.html" class="navbar-brand">
+                    <span class="brand-text">UKFS</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about"><i
+                                    class="fas fa-info-circle"></i> About
+                                us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services"><i
+                                    class="fas fa-concierge-bell"></i>
+                                Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fas fa-envelope"></i>
+                                Contact
+                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#network"><i class="fas fa-globe"></i>
+                                Network</a></li>
+                        <li>
+                            <a href="feedback.html" class="btn btn-primary rounded-pill px-4">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class="sidebar d-md-none" id="sidebarMenu">
-            <span class="close-btn">&times;</span>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i>
-                        Home</a></li>
-                <li><a href="index.html#about"><i
-                            class="fas fa-info-circle"></i> About us</a></li>
-                <li><a href="index.html#services"><i
-                            class="fas fa-concierge-bell"></i> Services</a></li>
-                <li><a href="contactus.html"><i class="fas fa-envelope"></i>
-                        Contact Us</a></li>
-                <li><a href="index.html#network"><i class="fas fa-globe"></i>
-                        Network</a></li>
-                <li>
-                    <a href="feedback.html"
-                        class="btn btn-primary rounded-pill px-4">Feedback</a>
-                </li>
-            </ul>
-        </div>
+    </div>
+    <div class="sidebar d-md-none" id="sidebarMenu">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>
+                    Home</a></li>
+            <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About us</a></li>
+            <li><a href="index.html#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="contactus.html"><i class="fas fa-envelope"></i>
+                    Contact Us</a></li>
+            <li><a href="index.html#network"><i class="fas fa-globe"></i>
+                    Network</a></li>
+            <li>
+                <a href="feedback.html" class="btn btn-primary rounded-pill px-4">Feedback</a>
+            </li>
+        </ul>
+    </div>
 
-        <div class="feedbackcontainer">
-            <div class="feedback-form">
-                <h2>How satisfied were you with our freight services?</h2>
+    <div class="feedbackcontainer">
+        <div class="feedback-form">
+            <h2>How satisfied were you with our freight services?</h2>
 
-                <div class="rating-rows">
-                    <div class="rating-row" id="rating-row-1">
-                        <div class="rating-button" data-value="0">0</div>
-                        <div class="rating-button" data-value="1">1</div>
-                        <div class="rating-button" data-value="2">2</div>
-                        <div class="rating-button" data-value="3">3</div>
-                        <div class="rating-button" data-value="4">4</div>
-                        <div class="rating-button" data-value="5">5</div>
-                    </div>
-                    <div class="rating-row" id="rating-row-2">
-                        <div class="rating-button" data-value="6">6</div>
-                        <div class="rating-button" data-value="7">7</div>
-                        <div class="rating-button" data-value="8">8</div>
-                        <div class="rating-button" data-value="9">9</div>
-                        <div class="rating-button" data-value="10">10</div>
-                    </div>
+            <div class="rating-rows">
+                <div class="rating-row" id="rating-row-1">
+                    <div class="rating-button" data-value="0">0</div>
+                    <div class="rating-button" data-value="1">1</div>
+                    <div class="rating-button" data-value="2">2</div>
+                    <div class="rating-button" data-value="3">3</div>
+                    <div class="rating-button" data-value="4">4</div>
+                    <div class="rating-button" data-value="5">5</div>
                 </div>
-
-                <div class="rating-labels">
-                    <span class="rating-label-left">0 - Extremely
-                        Unlikely</span>
-                    <span class="rating-label-right">10 - Extremely
-                        Likely</span>
+                <div class="rating-row" id="rating-row-2">
+                    <div class="rating-button" data-value="6">6</div>
+                    <div class="rating-button" data-value="7">7</div>
+                    <div class="rating-button" data-value="8">8</div>
+                    <div class="rating-button" data-value="9">9</div>
+                    <div class="rating-button" data-value="10">10</div>
                 </div>
-
-                <div class="form-group">
-                    <label for="feedback">What can we improve to serve you
-                        better?</label>
-                    <textarea id="feedback" class="form-control"
-                        placeholder="We'd love to hear your suggestions"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email (optional)</label>
-                    <input type="email" id="email" class="form-control"
-                        placeholder="someone@something.com">
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" id="submit-btn" class="btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18"
-                            height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon
-                                points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                        SEND FEEDBACK
-                    </button>
-                </div>
-
             </div>
 
-            <div class="thank-you-message" id="thank-you"
-                style="display: none;">
-                <div class="success-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            <div class="rating-labels">
+                <span class="rating-label-left">0 - Extremely
+                    Unlikely</span>
+                <span class="rating-label-right">10 - Extremely
+                    Likely</span>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">What can we improve to serve you
+                    better?</label>
+                <textarea id="feedback" class="form-control"
+                    placeholder="We'd love to hear your suggestions"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" class="form-control" placeholder="someone@something.com">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submit-btn" class="btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                     </svg>
-                </div>
-                <h2>Thank You!</h2>
-                <p>Your feedback has been submitted successfully. We appreciate
-                    your input!</p>
-                <div class="center-button">
-                    <button class="btn-primary" id="submit-another">Submit
-                        another response</button>
-                </div>
+                    SEND FEEDBACK
+                </button>
             </div>
+
         </div>
 
-        <!------------------------------------------------ Chatbot Section ------------------------------------------------>
-        <button id="ukf-chat-toggle-btn" aria-label="Toggle Assistant"
-            aria-pressed="false">🤖</button>
-
-        <div id="ukf-chatbot-container">
-            <div id="ukf-chatbot-header">
-                UKF Assistant
-                <button id="ukf-chat-close-btn"
-                    aria-label="Close Chat">✖</button>
-            </div>
-            <div id="ukf-chat-output"></div>
-        </div>
-
-        <div id="ukf-chat-popup">
-            <div class="ukf-avatar">
-                <svg width="40" height="40" viewBox="0 0 64 64"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="18" r="12" fill="#f1c40f" />
-                    <path d="M16 58c0-11 9-20 16-20s16 9 16 20"
-                        fill="#e67e22" />
+        <div class="thank-you-message" id="thank-you" style="display: none;">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
             </div>
-            <div class="ukf-popup-text">
-                Hello! I'm your assistant. Click the robot icon to start.
+            <h2>Thank You!</h2>
+            <p>Your feedback has been submitted successfully. We appreciate
+                your input!</p>
+            <div class="center-button">
+                <button class="btn-primary" id="submit-another">Submit
+                    another response</button>
             </div>
         </div>
+    </div>
 
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="img/logo1.jpg" alt="Logo">
-                    <p>The faster, easier way to book and manage your
-                        international shipments</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Link</h4>
-                    <ul>
-                        <li><a href="index.html#about">About us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="index.html#network">Network</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="index.html#why-choose-us">Why Choose
-                                Us</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#oceanFreight">Ocean freight</a></li>
-                        <li><a href="#airFreight">Air freight</a></li>
-                        <li><a href="#roadFreight">Road freight</a></li>
-                        <li><a href="#customsClearance">Customs
-                                clearance</a></li>
-                        <li><a href="#crossBorderRoad">Cross-border</a></li>
-                        <li><a href="#incoterms">Incoterms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <div>
-                        <h4>Get In Touch</h4>
-                        <h6><i class="fas fa-map-marker-alt"></i> Entrance no:4
-                            Firest Floor<br>
-                            Office no 2056-A <br>
-                            Dubai cargo village-DUBAI</p>
-                        <h6><i class="fas fa-phone"
-                                style="transform: rotate(90deg);"> </i> +012 345
+    <!------------------------------------------------ Chatbot Section ------------------------------------------------>
+    <button id="cschat-toggle-btn" aria-label="Toggle Assistant" aria-pressed="false">🤖</button>
+
+    <div id="cschat-container">
+        <div id="cschat-header">
+            UKFservices Chat
+            <button id="cschat-close-btn" aria-label="Close Chat">✖</button>
+        </div>
+        <div id="cschat-output"></div>
+        <div id="cschat-end">
+            <h2>Chat Ended</h2>
+            <p>Thank you for chatting with UKFservices! Have a great day! 🌟</p>
+        </div>
+    </div>
+
+    <div id="cschat-popup">
+        <div class="cschat-avatar">
+            <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="18" r="12" fill="#f1c40f" />
+                <path d="M16 58c0-11 9-20 16-20s16 9 16 20" fill="#e67e22" />
+            </svg>
+        </div>
+        <div class="cschat-text">Hi there! 👋 I'm Assistant from UKFservices. How can I make your day easier?</div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo1.jpg" alt="Logo">
+                <p>The faster, easier way to book and manage your
+                    international shipments</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="index.html#about">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html#network">Network</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="index.html#why-choose-us">Why Choose
+                            Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#oceanFreight">Ocean freight</a></li>
+                    <li><a href="#airFreight">Air freight</a></li>
+                    <li><a href="#roadFreight">Road freight</a></li>
+                    <li><a href="#customsClearance">Customs
+                            clearance</a></li>
+                    <li><a href="#crossBorderRoad">Cross-border</a></li>
+                    <li><a href="#incoterms">Incoterms</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <div>
+                    <h4>Get In Touch</h4>
+                    <h6><i class="fas fa-map-marker-alt"></i> Entrance no:4
+                        Firest Floor<br>
+                        Office no 2056-A <br>
+                        Dubai cargo village-DUBAI</p>
+                        <h6><i class="fas fa-phone" style="transform: rotate(90deg);"> </i> +012 345
                             67890</p>
-                        <h6><i class="fas fa-envelope"></i> ukf@gmail.com</p>
-                    </div>
-                    <div class="social-icons">
-                        <a
-                            href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a
-                            href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
-                                class="fab fa-facebook-f"></i></a>
-                    </div>
+                            <h6><i class="fas fa-envelope"></i> ukf@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/_ukf_sea_and_air_cargo/?utm_source=ig_web_button_share_sheet"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a
+                        href="https://www.facebook.com/DXBUKFservices?rdid=AJsNSeesd3lQyVRb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18vdgaJzqw%2F#"><i
+                            class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-        </footer>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/feedback.js"></script>
-    </body>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
 
 </html>

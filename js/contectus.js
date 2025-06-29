@@ -83,131 +83,191 @@ form.addEventListener("submit", async (e) => {
 
 // ukf_chatbot.js
 // Path to your Excel file;
-const UKF_EXCEL_PATH = 'ukf_chatbot_real_nested.xlsx';
+const CSV_PATH = 'ukf_chatbot_real_nested.xlsx';
+let chatData = [], currentCat = null;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-let ukfData = [];
-let ukfCurrentView = 'main';
-let ukfCurrentCategory = null;
-let ukfCurrentSub = null;
+function scrollBottom() {
+    cschatOutput.scrollTop = cschatOutput.scrollHeight;
+}
+async function typeMsg(el, txt, speed = 30) {
+    el.textContent = '';
+    for (let i = 1; i <= txt.length; i++) {
+        el.textContent = txt.slice(0, i);
+        await sleep(speed);
+    }
+    new Audio('sounds/message-pop.mp3').play().catch(() => { });
+}
+async function showTyping(dur = 1500) {
+    const ind = document.createElement('div');
+    ind.className = 'cschat-typing';
+    for (let i = 0; i < 3; i++) {
+        const dot = document.createElement('div'); dot.className = 'dot';
+        ind.appendChild(dot);
+    }
+    cschatOutput.appendChild(ind);
+    scrollBottom();
+    await sleep(dur);
+    ind.remove();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const ukfToggleBtn = document.getElementById('ukf-chat-toggle-btn');
-    const ukfContainer = document.getElementById('ukf-chatbot-container');
-    const ukfOutput = document.getElementById('ukf-chat-output');
-    const ukfPopup = document.getElementById('ukf-chat-popup');
-    const ukfCloseBtn = document.getElementById('ukf-chat-close-btn');
+    cschatToggleBtn = document.getElementById('cschat-toggle-btn');
+    cschatContainer = document.getElementById('cschat-container');
+    cschatOutput = document.getElementById('cschat-output');
+    cschatCloseBtn = document.getElementById('cschat-close-btn');
+    cschatPopup = document.getElementById('cschat-popup');
+    cschatEnd = document.getElementById('cschat-end');
 
-    ukfToggleBtn.addEventListener('click', () => {
-        const ukfIsOpen = ukfContainer.style.display === 'flex';
-        if (ukfIsOpen) {
-            ukfContainer.style.display = 'none';
-            ukfToggleBtn.setAttribute('aria-pressed', 'false');
-        } else {
-            ukfContainer.style.display = 'flex';
-            ukfToggleBtn.setAttribute('aria-pressed', 'true');
-            if (ukfData.length && ukfCurrentView === 'main') ukfShowCategories();
-        }
-        ukfPopup.style.animation = '';
-        ukfPopup.style.opacity = '0';
+    cschatToggleBtn.addEventListener('click', () => {
+        const open = cschatContainer.style.display === 'flex';
+        cschatContainer.style.display = open ? 'none' : 'flex';
+        cschatToggleBtn.setAttribute('aria-pressed', (!open).toString());
+        if (!open && chatData.length) showCategories();
+        cschatPopup.style.opacity = '0';
+    });
+    cschatCloseBtn.addEventListener('click', () => {
+        cschatContainer.style.display = 'none';
+        cschatToggleBtn.setAttribute('aria-pressed', 'false');
     });
 
-    ukfCloseBtn.addEventListener('click', () => {
-        ukfContainer.style.display = 'none';
-        ukfToggleBtn.setAttribute('aria-pressed', 'false');
-    });
-
-    fetch(UKF_EXCEL_PATH)
-        .then(res => res.arrayBuffer())
-        .then(buffer => {
-            const workbook = XLSX.read(buffer, { type: 'array' });
-            const sheet = workbook.Sheets[workbook.SheetNames[0]];
-            ukfData = XLSX.utils.sheet_to_json(sheet);
-            if (ukfContainer.style.display === 'flex') ukfShowCategories();
-        })
-        .catch(err => {
-            console.error('Failed to load Excel:', err);
-        });
-
-    function ukfShowCategories() {
-        ukfCurrentView = 'main';
-        ukfOutput.innerHTML = '<div class="ukf-message ukf-bot">Select a Category:</div>';
-        const categories = [...new Set(ukfData.map(row => row.Category))];
-        categories.forEach(cat => {
-            const btn = document.createElement('button');
-            btn.className = 'ukf-btn';
-            btn.textContent = cat;
-            btn.onclick = () => {
-                ukfCurrentCategory = cat;
-                ukfShowSubcategories(cat);
-            };
-            ukfOutput.appendChild(btn);
-        });
-    }
-
-    function ukfShowSubcategories(category) {
-        ukfCurrentView = 'sub';
-        const subs = [...new Set(
-            ukfData
-                .filter(row => row.Category === category && row.Subcategory)
-                .map(row => row.Subcategory)
-        )];
-        ukfOutput.innerHTML = `<div class="ukf-message ukf-bot">${subs.length ? 'Choose a Subcategory:' : 'Select a Question:'
-            }</div>`;
-        if (subs.length) {
-            subs.forEach(sub => {
-                const btn = document.createElement('button');
-                btn.className = 'ukf-btn';
-                btn.textContent = sub;
-                btn.onclick = () => {
-                    ukfCurrentSub = sub;
-                    ukfShowQuestions(category, sub);
-                };
-                ukfOutput.appendChild(btn);
-            });
-        } else {
-            ukfShowQuestions(category, '');
-        }
-        ukfAppendBack(ukfShowCategories);
-    }
-
-    function ukfShowQuestions(category, sub) {
-        ukfCurrentView = 'question';
-        const filtered = ukfData.filter(row =>
-            row.Category === category && row.Subcategory === sub
-        );
-        ukfOutput.innerHTML = `<div class="ukf-message ukf-bot">Select a Question:</div>`;
-        filtered.forEach(q => {
-            const btn = document.createElement('button');
-            btn.className = 'ukf-btn';
-            btn.textContent = q.Question;
-            btn.onclick = () => ukfShowAnswer(q);
-            ukfOutput.appendChild(btn);
-        });
-        ukfAppendBack(() => ukfShowSubcategories(category));
-    }
-
-    function ukfShowAnswer(row) {
-        ukfOutput.innerHTML = `
-      <div class="ukf-message ukf-user">${row.Question}</div>
-      <div class="ukf-message ukf-bot">${row.Answer}</div>
-    `;
-        ukfAppendBack(() => ukfShowQuestions(row.Category, row.Subcategory));
-    }
-
-    function ukfAppendBack(callback) {
-        const back = document.createElement('button');
-        back.className = 'ukf-btn ukf-back-btn';
-        back.textContent = '🔙 Back';
-        back.onclick = callback;
-        ukfOutput.appendChild(back);
-    }
+    fetch(CSV_PATH)
+        .then(r => r.arrayBuffer())
+        .then(buf => {
+            const wb = XLSX.read(buf, { type: 'array' });
+            chatData = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+        }).catch(console.error);
 
     window.addEventListener('load', () => {
-        ukfPopup.style.animation = 'none';
-        void ukfPopup.offsetWidth;
-        ukfPopup.style.animation = 'ukf-slideInOut 6s ease-in-out forwards';
-        ukfPopup.addEventListener('animationend', () => {
-            ukfPopup.style.opacity = '0';
-        }, { once: true });
+        cschatPopup.style.animation = 'cschat-slideInOut 6s ease-in-out forwards';
     });
 });
+
+async function showCategories() {
+    cschatOutput.innerHTML = '';
+    await showTyping();
+    const intro = document.createElement('div');
+    intro.className = 'cschat-message cschat-bot';
+    cschatOutput.appendChild(intro);
+    await typeMsg(intro, 'Welcome to UKFservices! How can I help you today?', 30);
+    scrollBottom();
+
+    const grid = document.createElement('div');
+    grid.className = 'cschat-grid';
+    [...new Set(chatData.map(r => r.Category))].forEach((cat, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'cschat-btn';
+        btn.textContent = cat;
+        btn.style.animationDelay = `${i * 0.05}s`;
+        btn.onclick = async () => {
+            grid.remove();
+            const usr = document.createElement('div');
+            usr.className = 'cschat-message cschat-user';
+            usr.textContent = cat;
+            cschatOutput.appendChild(usr);
+            scrollBottom();
+            currentCat = cat;
+            await sleep(200);
+            showSubcats(cat);
+        };
+        grid.appendChild(btn);
+    });
+    cschatOutput.appendChild(grid);
+    scrollBottom();
+}
+
+async function showSubcats(category) {
+    await showTyping();
+    const prompt = document.createElement('div');
+    prompt.className = 'cschat-message cschat-bot';
+    cschatOutput.appendChild(prompt);
+    await typeMsg(prompt, 'Alright! Can you be a bit more specific?', 25);
+    scrollBottom();
+
+    const grid = document.createElement('div');
+    grid.className = 'cschat-grid';
+    [...new Set(chatData.filter(r => r.Category === category).map(r => r.Subcategory))]
+        .forEach((sub, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'cschat-btn';
+            btn.textContent = sub;
+            btn.style.animationDelay = `${i * 0.05}s`;
+            btn.onclick = async () => {
+                grid.remove();
+                const usr = document.createElement('div');
+                usr.className = 'cschat-message cschat-user';
+                usr.textContent = sub;
+                cschatOutput.appendChild(usr);
+                scrollBottom();
+                await sleep(200);
+                showQuestions(category, sub);
+            };
+            grid.appendChild(btn);
+        });
+    cschatOutput.appendChild(grid);
+    scrollBottom();
+}
+
+async function showQuestions(category, sub) {
+    await showTyping();
+    const prompt = document.createElement('div');
+    prompt.className = 'cschat-message cschat-bot';
+    cschatOutput.appendChild(prompt);
+    await typeMsg(prompt, 'Select a question:', 25);
+    scrollBottom();
+
+    const grid = document.createElement('div');
+    grid.className = 'cschat-grid';
+    chatData.filter(r => r.Category === category && r.Subcategory === sub)
+        .forEach((row, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'cschat-btn';
+            btn.textContent = row.Question;
+            btn.style.animationDelay = `${i * 0.05}s`;
+            btn.onclick = async () => {
+                grid.remove();
+                const usr = document.createElement('div');
+                usr.className = 'cschat-message cschat-user';
+                usr.textContent = row.Question;
+                cschatOutput.appendChild(usr);
+                scrollBottom();
+                await sleep(200);
+                showAnswer(row);
+            };
+            grid.appendChild(btn);
+        });
+    cschatOutput.appendChild(grid);
+    scrollBottom();
+}
+
+async function showAnswer(row) {
+    await showTyping();
+    const bot = document.createElement('div');
+    bot.className = 'cschat-message cschat-bot';
+    cschatOutput.appendChild(bot);
+    await typeMsg(bot, row.Answer, 25);
+    scrollBottom();
+
+    const grid = document.createElement('div');
+    grid.className = 'cschat-grid';
+    ['End Chat', 'Repeat Chat'].forEach((lbl, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'cschat-btn ' + (lbl === 'End Chat' ? 'cschat-btn-end' : 'cschat-btn-repeat');
+        btn.textContent = lbl;
+        btn.style.animationDelay = `${i * 0.05}s`;
+        btn.onclick = () => lbl === 'End Chat' ? endChat() : showCategories();
+        grid.appendChild(btn);
+    });
+    cschatOutput.appendChild(grid);
+    scrollBottom();
+}
+
+function endChat() {
+    cschatOutput.innerHTML = '';
+    cschatEnd.style.display = 'block';
+    setTimeout(() => {
+        cschatEnd.style.display = 'none';
+        cschatContainer.style.display = 'none';
+        cschatToggleBtn.setAttribute('aria-pressed', 'false');
+    }, 4000);
+}
