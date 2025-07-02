@@ -157,11 +157,11 @@
 .cschat-user::after {
     content: '';
     position: absolute;
-    left: -8px;
+    right: -13px; /* Changed from left to right */
     top: 50%;
     transform: translateY(-50%);
     border: 8px solid transparent;
-    border-right-color: #1abc9c;
+    border-left-color: #1abc9c; /* Changed from border-right-color */
 }
 
 /* ===== Buttons ===== */
